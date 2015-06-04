@@ -1,0 +1,71 @@
+
+.promo{
+    width: 100%;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+
+
+    &__offer{
+        display: inline-block;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        box-sizing:border-box;
+        box-sizing:border-box;
+        position: relative;
+
+        a{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            display: inline-block;
+            background-color: rgba(54, 25, 25, .1);
+            top:0;
+            left:0;
+            text-decoration: none;
+            text-align: center;
+            padding-top: 50%;
+            text-transform: uppercase;
+            font-size: 2em;
+            color:#fff;
+            font-weight: bold;
+            z-index: 12;
+
+            &:hover{
+                background-color: rgba(54, 25, 25, .5);
+                transition: all 0.5s ease;
+            }
+        }
+    }
+
+    &__offer__2-3{
+        width: 66.3%;
+        margin-right: -0.25em;
+    }
+
+    &__offer__1-3{
+        width: 32.44%;
+        margin-left: 1.2%;
+        margin-right: 0;
+        background: #ccc;
+    }
+
+    &__offer__3{
+        width: 32.53%;
+        margin-right: -0.25em;
+        margin-left: 1.2%;
+
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+// TODO: create promo grid to 4 collums
+    &__offer__4{
+        width: 25%;
+        margin-right: -4px;
+        &:nth-child(4){
+            // margin-right: 0;
+        }
+    }
+}

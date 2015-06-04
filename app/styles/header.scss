@@ -15,7 +15,7 @@ ul{
 }
 
 .header{
-    margin: 25px 0;
+    margin: 0 0 15px 0;
     background: #efefef;
     width: 100%;
 
@@ -45,14 +45,20 @@ ul{
         position: absolute;
         right: 25px;
         top: 30px;
-
     }
+
     &__cart{
         position: absolute;
         top: 30px;
         right:0;
         font-size: $base-font;
-        
+        padding-left: 20px;
+
+        .glyphicon-shopping-cart{
+            position: absolute;
+            left:0;
+            top:5px;
+        }
     }
 }
 
@@ -103,7 +109,7 @@ ul{
             top: 15px;
             left: 35px;
         }
-        
+
         &__search{
             right: 0px;
             top:16px;

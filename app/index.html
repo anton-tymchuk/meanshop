@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html ng-app>
   <head>
     <meta charset="utf-8">
     <title>simpla</title>
@@ -20,26 +20,14 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <a class="navbar-brand" href="#">sitename</a>
-    <ul class="nav navbar-nav">
-      <li class="active">
-        <a href="#">Home</a>
-      </li>
-      <li>
-        <a href="#">Link</a>
-      </li>
-    </ul>
-  </nav>
-
   <div class="header--static header">
     <div class="container-fluid">
-      
+
       <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2">
         <div class="header__logo--static"><img src="http://placehold.it/200x100" alt=""></div>
         <div class="header__logo--fixed"><img src="http://placehold.it/75x50" alt=""></div>
       </div>
-      
+
       <div class="col-xs-6 col-sm-6 col-md-7 col-lg-8">
         <div class="header__menu">
           <ul>
@@ -59,26 +47,26 @@
 
       <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
         <div class="header__cart">
-          <span class="glyphicon glyphicon-shopping-cart"></span> 
+          <span class="glyphicon glyphicon-shopping-cart"></span>
           <span class="header--hidden"> В <a href="">Корзине</a> </span> 2 товара <span class="header--hidden">на:</span> 2 450 грн.
         </div>
       </div>
-      
-      
+
+
     </div>
   </div>
 
-  <div class="header--fixed header">
+  <div class="header--fixed header" style="display:none">
     <div class="container-fluid">
-      
+
       <div class="col-xs-3 col-sm-2 col-md-1 col-lg-1">
         <div class="header__logo--static"><img src="http://placehold.it/180x100" alt=""></div>
         <div class="header__logo--fixed"><img src="http://placehold.it/100x50" alt=""></div>
       </div>
-      
+
       <div class="col-xs-6 col-sm-7 col-md-9 col-lg-9">
         <div class="header__menu">
-          
+
           <ul>
             <li><a href="">Collection</a></li>
             <li><a href="">Catalog</a></li>
@@ -96,45 +84,169 @@
       </div>
 
       <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        
         <div class="header__cart">
-          <span class="glyphicon glyphicon-shopping-cart"></span> 
+          <span class="glyphicon glyphicon-shopping-cart"></span>
           <span class="header--hidden"> В <a href="">Корзине</a> </span> 2 товара <span class="header--hidden">на:</span> 2 450 грн.
         </div>
       </div>
-      
-      
+
+
     </div>
   </div>
 
-    <div class="container">
+    <div class="container-fluid">
 
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-      <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-ok"></span></a></p>
+          <div class="promo">
+           <div class="promo__offer promo__offer__2-3">
+               <img src="http://blob2.trendsbrands.ru/v20150409/images/e73/banner_main_tblim_june_01.jpg" alt="" width="100%" />
+           </div>
+           <div class="promo__offer promo__offer__1-3">
+           <img src="http://blob2.trendsbrands.ru/v20150409/images/3af/main_look_base_notext.jpg" alt="" width="100%" /></div>
+         </div>
+
+          <div class="promo">
+            <div class="promo__offer promo__offer__3">
+              <img src="http://blob2.trendsbrands.ru/v20150409/images/f8f/look_may_01_main_b(1).jpg" alt="" width="100%">
+              <a href="">Новая коллекция</a>
+            </div>
+            <div class="promo__offer promo__offer__3">
+              <img src="http://blob1.trendsbrands.ru/v20150409/images/f8b/main_summer.jpg" alt="" width="100%">
+              <a href="">На выпускной</a>
+            </div>
+            <div class="promo__offer promo__offer__3">
+              <img src="http://blob1.trendsbrands.ru/v20150409/images/fc0/item_0306_d.jpg" alt="" width="100%">
+            </div>
+          </div>
+
       </div>
 
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="catalog margin-top-35">
+              <div class="catalog__title">
+                  Новинки Лето 2015
+              </div>
+              <ul class="catalog__products">
+                  <li class="catalog__products__item">
+                        <a href="#"><img src="http://blob2.trendsbrands.ru/v20150409/thumbs/УТ000027575/10e80adf90107299ea652d06e8b0b717/middle.jpg" alt="" width="100%"/></a>
+                        <div class="catalog__products__item_annotation">
 
-          <h4>Sass</h4>
-          <p>Sass is a mature, stable, and powerful professional grade CSS extension language.</p>
+                            <div class="catalog__name">
+                                <a href="#">Платье серое в точку</a>
+                            </div>
 
+                            <div class="catalog__price">
+                                <span class="catalog__price--new">
+                                    3000 грн
+                                </span>
+                                <span class="catalog__price--old">
+                                    4200 грн
+                                </span>
+                            </div>
+                        </div>
+                  </li>
+                  <li class="catalog__products__item">
+                      <div class="catalog__image">
+                          <a href="#"><img src="http://blob1.trendsbrands.ru/v20150409/thumbs/УТ000027576/d549669f82d55ba2155fd879e0f0f1e4/middle.jpg" alt="" width="100%"/></a>
+                      </div>
 
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
+                      <div class="catalog__products__item_annotation">
 
+                          <div class="catalog__name">
+                              <a href="#">Платье серое в точку</a>
+                          </div>
 
-        </div>
-      </div>
+                          <div class="catalog__price">
+                              <span class="catalog__price">
+                                  3000 грн
+                              </span>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="catalog__products__item">
+                        <a href="#"><img src="http://blob2.trendsbrands.ru/v20150409/thumbs/УТ000027568/0996f360d06df2f6983f6e1c4d70ad95/middle.jpg" alt="" width="100%"/></a>
+                        <div class="catalog__products__item_annotation">
+
+                            <div class="catalog__name">
+                                <a href="#">Платье серое в точку</a>
+                            </div>
+
+                            <div class="catalog__price">
+                                <span class="catalog__price">
+                                    3000 грн
+                                </span>
+                            </div>
+                        </div>
+                  </li>
+                  <li class="catalog__products__item">
+                        <a href="#"><img src="http://blob2.trendsbrands.ru/v20150409/thumbs/УТ000027280/41b2d0a8768b19318b1a47a02577519e/middle.jpg" alt="" width="100%"/></a>
+                        <div class="catalog__products__item_annotation">
+
+                            <div class="catalog__name">
+                                <a href="#">Платье серое в точку</a>
+                            </div>
+
+                            <div class="catalog__price">
+                                <span class="catalog__price">
+                                    3000 грн
+                                </span>
+                            </div>
+                        </div>
+                  </li>
+              </ul>
+          </div>
+          </div>
+
 
       <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
+
+            <div class="col-md-3">
+                  <div class="footer__header">
+                      О магазине
+                  </div>
+                  <ul>
+                      <li><a href="">О проекте</li></a>
+                      <li><a href="">T&B Limited</li></a>
+                      <li><a href="">Наши магазины</li></a>
+                      <li><a href="">T&B Club</li></a>
+                  </ul>
+            </div>
+
+            <div class="col-md-2">
+                  <div class="footer__header">
+                      Помощь
+                  </div>
+                  <ul>
+                      <li><a href="">Контакты</li></a>
+                      <li><a href="">Оплата</li></a>
+                      <li><a href="">Доставка</li></a>
+                      <li><a href="">Гарантия и возврат</li></a>
+                  </ul>
+            </div>
+            <div class="col-md-4">
+                  <div class="footer__header">
+                      Мы в социальных сетях
+                  </div>
+                  <span class="social social-facebook"></span>
+                  <span class="social social-facebook"></span>
+                  <span class="social social-facebook"></span>
+                  <span class="social social-facebook"></span>
+
+            </div>
+            <div class="col-md-3">
+                  <div class="footer__header">
+                      Способы оплаты
+                  </div>
+                  <span><img src="http://www.trendsbrands.ru/bitrix/templates/new2014/assets/img/graphics/payment-mastercard.gif" alt="" /></span>
+                  <span><img src="http://www.trendsbrands.ru/bitrix/templates/new2014/assets/img/graphics/payment-visa.gif" alt="" /></span>
+                  <span><img src="http://www.trendsbrands.ru/bitrix/templates/new2014/assets/img/graphics/cash_icon.png" alt="" /></span>
+
+            </div>
+        </div>
+
+
+
 
     </div>
 
@@ -154,6 +266,7 @@
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
