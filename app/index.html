@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="shopApp">
   <head>
     <meta charset="utf-8">
     <title>simpla</title>
@@ -24,7 +24,10 @@
     <div class="container-fluid">
 
       <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2">
-        <div class="header__logo--static"><img src="http://placehold.it/200x100" alt=""></div>
+        <div class="header__logo--static">
+            <a href="#/"><img src="http://placehold.it/200x100" alt=""></a>
+
+        </div>
         <div class="header__logo--fixed"><img src="http://placehold.it/75x50" alt=""></div>
       </div>
 
@@ -32,7 +35,7 @@
         <div class="header__menu">
           <ul>
             <li><a href="">Collection</a></li>
-            <li><a href="">Catalog</a></li>
+            <li><a href="#/catalog">Catalog</a></li>
             <li сlass="header--hidden"><a href="">Sale</a></li>
             <li><a href="">My Purchases</a></li>
             <li сlass="header--hidden"><a href="">Contacts</a></li>
@@ -94,109 +97,12 @@
     </div>
   </div>
 
+
     <div class="container-fluid">
 
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="" ng-view="" autoscroll="true"></div>
 
-          <div class="promo">
-           <div class="promo__offer promo__offer__2-3">
-               <img src="http://blob2.trendsbrands.ru/v20150409/images/e73/banner_main_tblim_june_01.jpg" alt="" width="100%" />
-           </div>
-           <div class="promo__offer promo__offer__1-3">
-           <img src="http://blob2.trendsbrands.ru/v20150409/images/3af/main_look_base_notext.jpg" alt="" width="100%" /></div>
-         </div>
 
-          <div class="promo">
-            <div class="promo__offer promo__offer__3">
-              <img src="http://blob2.trendsbrands.ru/v20150409/images/f8f/look_may_01_main_b(1).jpg" alt="" width="100%">
-              <a href="">Новая коллекция</a>
-            </div>
-            <div class="promo__offer promo__offer__3">
-              <img src="http://blob1.trendsbrands.ru/v20150409/images/f8b/main_summer.jpg" alt="" width="100%">
-              <a href="">На выпускной</a>
-            </div>
-            <div class="promo__offer promo__offer__3">
-              <img src="http://blob1.trendsbrands.ru/v20150409/images/fc0/item_0306_d.jpg" alt="" width="100%">
-            </div>
-          </div>
-
-      </div>
-
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <div class="catalog margin-top-35">
-              <div class="catalog__title">
-                  Новинки Лето 2015
-              </div>
-              <ul class="catalog__products">
-                  <li class="catalog__products__item">
-                        <a href="#"><img src="http://blob2.trendsbrands.ru/v20150409/thumbs/УТ000027575/10e80adf90107299ea652d06e8b0b717/middle.jpg" alt="" width="100%"/></a>
-                        <div class="catalog__products__item_annotation">
-
-                            <div class="catalog__name">
-                                <a href="#">Платье серое в точку</a>
-                            </div>
-
-                            <div class="catalog__price">
-                                <span class="catalog__price--new">
-                                    3000 грн
-                                </span>
-                                <span class="catalog__price--old">
-                                    4200 грн
-                                </span>
-                            </div>
-                        </div>
-                  </li>
-                  <li class="catalog__products__item">
-                      <div class="catalog__image">
-                          <a href="#"><img src="http://blob1.trendsbrands.ru/v20150409/thumbs/УТ000027576/d549669f82d55ba2155fd879e0f0f1e4/middle.jpg" alt="" width="100%"/></a>
-                      </div>
-
-                      <div class="catalog__products__item_annotation">
-
-                          <div class="catalog__name">
-                              <a href="#">Платье серое в точку</a>
-                          </div>
-
-                          <div class="catalog__price">
-                              <span class="catalog__price">
-                                  3000 грн
-                              </span>
-                          </div>
-                      </div>
-                  </li>
-                  <li class="catalog__products__item">
-                        <a href="#"><img src="http://blob2.trendsbrands.ru/v20150409/thumbs/УТ000027568/0996f360d06df2f6983f6e1c4d70ad95/middle.jpg" alt="" width="100%"/></a>
-                        <div class="catalog__products__item_annotation">
-
-                            <div class="catalog__name">
-                                <a href="#">Платье серое в точку</a>
-                            </div>
-
-                            <div class="catalog__price">
-                                <span class="catalog__price">
-                                    3000 грн
-                                </span>
-                            </div>
-                        </div>
-                  </li>
-                  <li class="catalog__products__item">
-                        <a href="#"><img src="http://blob2.trendsbrands.ru/v20150409/thumbs/УТ000027280/41b2d0a8768b19318b1a47a02577519e/middle.jpg" alt="" width="100%"/></a>
-                        <div class="catalog__products__item_annotation">
-
-                            <div class="catalog__name">
-                                <a href="#">Платье серое в точку</a>
-                            </div>
-
-                            <div class="catalog__price">
-                                <span class="catalog__price">
-                                    3000 грн
-                                </span>
-                            </div>
-                        </div>
-                  </li>
-              </ul>
-          </div>
-          </div>
 
 
       <div class="footer">
@@ -267,12 +173,25 @@
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script src="scripts/app.js"></script>
+
+        <!-- Controllers -->
+        <script src="scripts/controllers/mainCatalogCtrl.js" charset="utf-8"></script>
+        <script src="scripts/controllers/catalogCtrl.js" charset="utf-8"></script>
+        <script src="scripts/controllers/productCrtl.js" charset="utf-8"></script>
+
+        <!-- Services -->
+        <script src="scripts/services/productsService.js" charset="utf-8"></script>
+        <script src="scripts/services/productService.js" charset="utf-8"></script>
+
         <!-- endbuild -->
 
 </body>

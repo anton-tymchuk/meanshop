@@ -1,0 +1,86 @@
+
+<div class="col-md-12">
+    <div class="product">
+        <div class="product__image">
+
+            <div class="product__image__preview">
+                <ul>
+                    <li ng-repeat="image in product.images">
+                        <img ng-src="{{image}}" width="100px;" alt="" />
+                    </li>
+                </ul>
+            </div>
+
+            <div class="product__main__image">
+                <img ng-src="{{product.imgUrl}}" alt="" />
+            </div>
+
+        </div>
+        <div class="product__anotation">
+            <div class="product__anotation__content">
+
+                <div class="product__id">
+                    id: {{product.id}}
+                </div>
+
+                <h1>{{product.name}} <a href="#"> {{product.brand}} </a></span></h1>
+
+                <div class="product__price">
+                    {{product.price}} <span>грн</span>
+                </div>
+
+                <div class="product__description">
+                    {{product.description}}
+
+                    <div class="product__more_info">
+                        <div class="product__features">
+                            <ul>
+                                <li><b>Состав:</b> {{product.structure}}</li>
+                                <li><b>Цвет:</b> {{product.color}}</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="product__size">
+                    <div class="product__size__grid">
+                        <div class="product__size__grid__title">Выберите размер</div>
+                        <span class="product__size__select" ng-repeat="size in product.sizes"> {{size}} </span>
+                    </div>
+                </div>
+
+
+                <div class="product__purchase">
+                    <div class="product__purchase__wishlist">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-plus"></span> добавить в wishlist
+                        </a>
+                    </div>
+                    <div class="product__purchase__addtocart">
+                        <a href="#" class="product__purchase__addtocart__btn">В корзину</a>
+                    </div>
+                </div>
+
+                <div class="additional__info">
+                    <div class="additional__info__delivery">
+                        <div class="additional__info__delivery__icon"></div>
+                        Бесплатная доставка по Украине
+                    </div>
+                    <div class="additional__info__try">
+                        <div class="additional__info__try__icon"></div>
+                        Привезем 2 размера на примерку
+                    </div>
+                    <div class="additional__info__return">
+                        <div class="additional__info__return__icon"></div>
+                        Обмен в течение 14 дней
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

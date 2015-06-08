@@ -1,0 +1,22 @@
+    {
+        "id": 101983,
+        "name": "Топ зеленый",
+        "brand": "Trends Brands",
+        "category": "Топ",
+        "price": 1190,
+        "oldPrice": "",
+        "imgUrl": "http://blob1.trendsbrands.ru/v20150409/thumbs/%D0%A3%D0%A2000027358/7c29a5085aeea3dde4b0c075e9f4db31/middle.jpg",
+        "images": [
+            "http://blob1.trendsbrands.ru/v20150409/thumbs/%D0%A3%D0%A2000027358/7c29a5085aeea3dde4b0c075e9f4db31/middle.jpg",
+            "http://blob1.trendsbrands.ru/v20150409/thumbs/%D0%A3%D0%A2000027358/ffaa9f0304396c39f8249bc5725b7640/middle.jpg",
+            "http://blob2.trendsbrands.ru/v20150409/thumbs/%D0%A3%D0%A2000027358/3c17f872399d50ce361c78a8deeae99e/middle.jpg"
+        ],
+        "color": "зеленый",
+        "sizes": [42, 44],
+        "featured": false,
+        "sale": false,
+        "description": "Топ в полоску от бренда Trends Brands. Модель без рукавов, прямого кроя. Мерки изделия: грудь 86 см, талия 88 см, бедра 100 см, длина изделия 45 см. Рост модели 175 см, размер 42.",
+        "structure": "100 хлопок",
+        "inStock": 10,
+        "purchased": false
+    }

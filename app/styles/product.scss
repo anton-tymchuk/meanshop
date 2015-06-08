@@ -1,0 +1,209 @@
+@import "common.scss";
+
+.product{
+
+    // Images
+    &__image{
+        position: relative;
+        float: left;
+        width: 55%;
+    }
+
+    &__image__preview{
+        position: absolute;
+        left:0;
+        width:100px;
+
+        li{
+            margin-bottom: 10px;
+            list-style: none;
+        }
+    }
+
+    &__main__image{
+        position: relative;
+        padding-left: 110px;
+        top:0;
+        width: auto;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    // Product anotation
+    &__anotation{
+        float: right;
+        width:45%;
+        padding-left: 15px;
+        padding-top: 45px;
+
+        &__content{
+            width:450px;
+            margin: 0 auto;
+        }
+    }
+
+    &__id{
+        text-align: center;
+        text-transform: uppercase;
+        color: lighten($black, 60%);
+    }
+
+    h1{
+        font-size: 1.875em;
+        line-height: 1.2em;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        color: lighten($black, 60%);
+
+        span{
+            color: $black;
+        }
+    }
+
+    &__price{
+        font-size: 1.25em;
+        text-align: center;
+    }
+
+    &__description{
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding: 25px 0;
+        margin:25px 0;
+        font-size: 0.9em;
+        margin-bottom: 25px;
+        color:lighten($black, 40%);
+    }
+
+    &__more_info{
+        margin-top: 15px;
+    }
+
+    &__features{
+        li{
+            list-style: none;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__size__select{
+        display: inline-block;
+        padding:13px 15px;
+        border-radius: 50%;
+        margin-right: 10px;
+        border:3px solid lighten($black, 50%);
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+    }
+
+    &__size__grid{
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 15px;
+
+        &__title{
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+    }
+
+    // Purchase block
+    &__purchase{
+
+        margin: 25px 0;
+        padding: 25px 0;
+        border-top: 1px solid #ccc;
+        background: lighten($black, 98%);
+        border-bottom: 1px solid #ccc;
+
+        &__wishlist{
+            display: inline-block;
+            width: 49%;
+            box-sizing: border-box;
+            padding-left: 15px;
+            position: relative;
+            font-size:0.9em;
+            text-transform: uppercase;
+            margin-right: -0.3em;
+        }
+
+        &__addtocart{
+            width: 50%;
+            box-sizing: border-box;
+            display: inline-block;
+            padding-right: 10px;
+
+            &__btn{
+                display: block;
+                padding: 15px 20px;
+                border: 3px solid $black;
+                border-radius: 10px;
+                text-align: center;
+                color:$black;
+                font-size: 1em;
+                text-transform: uppercase;
+                font-weight: bold;
+
+                &:hover{
+                    background: #fff;
+                    color: $black;
+                    border-color: $link-hover;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+
+    }
+}
+
+// TODO: сделать нормально!!!!
+
+.additional__info{
+    font-size: 0.8em;
+    color:$secondary-color;
+
+    &__delivery{
+        width: 31%;
+        float: left;
+        padding-right: 2%;
+
+        &__icon{
+            background: url('../images/icons.png') 0 0 no-repeat;
+            width: 42px;
+            height: 20px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__try{
+        width: 31%;
+        padding-right: 2%;
+        float: left;
+
+        &__icon{
+            background: url('../images/icons.png') 0 -18px no-repeat;
+            width: 42px;
+            height: 22px;
+            margin-bottom: 8px;
+        }
+    }
+
+    &__return{
+        width: 32%;
+        float: left;
+
+        &__icon{
+            background: url('../images/icons.png') 0 -38px no-repeat;
+            width: 42px;
+            height: 22px;
+            margin-bottom: 8px;
+        }
+    }
+}

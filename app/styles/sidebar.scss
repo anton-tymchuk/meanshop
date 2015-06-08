@@ -1,0 +1,31 @@
+$black: #000;
+$link-hover: orange;
+.sidebar{
+
+    margin-top: 35px;
+
+    ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    li{
+        margin-bottom: 10px;
+
+        a{
+            color: lighten($black, 50%);
+
+            &:hover{
+                color: $link-hover;
+                transition: all .1s ease;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__header{
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+}

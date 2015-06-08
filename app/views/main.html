@@ -1,0 +1,54 @@
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+    <div class="promo">
+     <div class="promo__offer promo__offer__2-3">
+         <img src="http://blob2.trendsbrands.ru/v20150409/images/e73/banner_main_tblim_june_01.jpg" alt="" width="100%" />
+     </div>
+     <div class="promo__offer promo__offer__1-3">
+     <img src="http://blob2.trendsbrands.ru/v20150409/images/3af/main_look_base_notext.jpg" alt="" width="100%" /></div>
+   </div>
+
+    <div class="promo">
+      <div class="promo__offer promo__offer__3">
+        <img src="http://blob2.trendsbrands.ru/v20150409/images/f8f/look_may_01_main_b(1).jpg" alt="" width="100%">
+        <a href="">Новая коллекция</a>
+      </div>
+      <div class="promo__offer promo__offer__3">
+        <img src="http://blob1.trendsbrands.ru/v20150409/images/f8b/main_summer.jpg" alt="" width="100%">
+        <a href="">На выпускной</a>
+      </div>
+      <div class="promo__offer promo__offer__3">
+        <img src="http://blob1.trendsbrands.ru/v20150409/images/fc0/item_0306_d.jpg" alt="" width="100%">
+      </div>
+    </div>
+
+</div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="catalog margin-top-35">
+        <div class="catalog__title">
+            Новинки Лето 2015
+        </div>
+        <ul class="catalog__products">
+
+            <li class="catalog__products__item" ng-repeat="product in products | limitTo:8">
+                <div class="catalog__image">
+                    <a href="#/catalog/{{product.id}}"><img alt="" ng-src="{{product.imgUrl}}" width="100%" /></a>
+                </div>
+
+                <div class="catalog__products__item_annotation">
+
+                    <div class="catalog__name">
+                        <a href="#/catalog/{{product.id}}">{{product.name}} {{product.brand}}</a>
+                    </div>
+
+                    <div class="catalog__price">
+                        <span class="catalog__price">
+                            {{product.price}} грн
+                        </span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </div>
