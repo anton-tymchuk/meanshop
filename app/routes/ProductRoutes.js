@@ -3,9 +3,16 @@ var express = require('express');
 var routes = function (Product) {
     var productRouter = express.Router();
 
+    // Fetch all products
     productRouter.route('/')
-        .get(function (req,res) {
-            res.send('ok!');
+        .get(function (req, res) {
+            Product.find({}, function (err, products) {
+                if(err) {
+                    res.send.err;
+                    return;
+                }
+                res.json(products);
+            });
         });
 
     // Add product

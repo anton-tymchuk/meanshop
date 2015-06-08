@@ -16,5 +16,6 @@ angular.module('shopApp')
             .when('/catalog/:productId', {
                 templateUrl: '../views/product.html',
                 controller: 'productCtrl'
-            });
+            })
+            .otherwise({redirectTo: "/"});
     });
