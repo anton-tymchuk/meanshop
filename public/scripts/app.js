@@ -3,7 +3,7 @@
 var app = angular.module('shopApp', ['ngRoute', 'ngResource']);
 
 angular.module('shopApp')
-    .config(function ($routeProvider) {
+    .config(function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
                 templateUrl: '../views/main.html',
@@ -18,4 +18,6 @@ angular.module('shopApp')
                 controller: 'productCtrl'
             })
             .otherwise({redirectTo: "/"});
+
+        $locationProvider.html5Mode(true);
     });

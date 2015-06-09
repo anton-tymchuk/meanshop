@@ -3,14 +3,6 @@
         <div class="sidebar__header">
             Каталог
         </div>
-        <ul>
-            <li><a href="#">Платья</a></li>
-            <li><a href="#">Топы</a></li>
-            <li><a href="#">Юбки</a></li>
-            <li><a href="#">Шорты</a></li>
-            <li><a href="#">Пиджики</a></li>
-            <li><a href="#">Брюки</a></li>
-        </ul>
     </div>
 </div>
 <div class="col-md-10">
@@ -20,21 +12,22 @@
         </div>
         <ul class="catalog__products">
 
-            <li class="catalog__products__item" ng-repeat="product in products | limitTo:8">
-                <div class="catalog__image">
-                    <a href="#"><img alt="" ng-src="{{product.imgUrl}}" width="100%" /></a>
+            <li class="catalog__products__item" ng-repeat="product in products">
+                <div class="catalog__image" ng-repeat="image in product.images | limitTo:1">
+                    <a href="/catalog/{{product.sku}}"><img alt="" ng-src="{{image}}" width="100%" /></a>
                 </div>
 
                 <div class="catalog__products__item_annotation">
 
                     <div class="catalog__name">
-                        <a href="#">{{product.name}} {{product.brand}}</a>
+                        <a href="/catalog/{{product.sku}}">{{product.title}} {{product.brand}}</a>
                     </div>
 
                     <div class="catalog__price">
                         <span class="catalog__price">
-                            {{product.price}} грн
+                            {{product.pricing.price}} грн
                         </span>
+                        <span class="catalog__price--old" ng-show="product.pricing.oldPrice">{{product.pricing.oldPrice}} грн</span>
                     </div>
                 </div>
             </li>

@@ -2,7 +2,8 @@ var express = require('express'),
     app = express(),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser'),
-    config = require('./app/config/config');
+    config = require('./app/config/config'),
+    morgan = require('morgan');
 
 var db = mongoose.connect(config.DB, function (err) {
         if(err) throw err;
@@ -13,6 +14,7 @@ var Product = require('./app/models/Product');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(morgan('dev'));
 
 app.use(express.static(__dirname + '/public'));
 

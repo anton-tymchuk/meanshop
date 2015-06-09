@@ -11,8 +11,8 @@
                 </ul>
             </div>
 
-            <div class="product__main__image">
-                <img ng-src="{{product.imgUrl}}" alt="" />
+            <div class="product__main__image" ng-repeat="image in product.images | limitTo:1">
+                <img ng-src="{{image}}" alt="" />
             </div>
 
         </div>
@@ -20,13 +20,13 @@
             <div class="product__anotation__content">
 
                 <div class="product__id">
-                    id: {{product.id}}
+                    id: {{product.sku}}
                 </div>
 
-                <h1>{{product.name}} <a href="#"> {{product.brand}} </a></span></h1>
+                <h1>{{product.title}} <a href="#"> {{product.brand}} </a></span></h1>
 
                 <div class="product__price">
-                    {{product.price}} <span>грн</span>
+                    {{product.pricing.price}} <span>грн</span>
                 </div>
 
                 <div class="product__description">
@@ -35,8 +35,8 @@
                     <div class="product__more_info">
                         <div class="product__features">
                             <ul>
-                                <li><b>Состав:</b> {{product.structure}}</li>
-                                <li><b>Цвет:</b> {{product.color}}</li>
+                                <li ng-repeat="structure in product.details.structure"><b>Состав:</b> {{structure}}</li>
+                                <li><b>Цвет:</b> {{product.details.color}}</li>
                             </ul>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                 <div class="product__size">
                     <div class="product__size__grid">
                         <div class="product__size__grid__title">Выберите размер</div>
-                        <span class="product__size__select" ng-repeat="size in product.sizes"> {{size}} </span>
+                        <span class="product__size__select" ng-repeat="size in product.details.sizes"> {{size}} </span>
                     </div>
                 </div>
 

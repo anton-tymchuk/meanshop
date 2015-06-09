@@ -1,11 +1,15 @@
 angular.module('shopApp')
-    .factory('Catalog',['$resource',
-        function ($resource) {
+    .factory('Catalog',['$http',
+        function ($http) {
+            var catalogFactory = {};
 
-            return $resource('/products/products.json', {}, {
-                query: {
-                    method: 'GET',
-                    isArray: true
-                }
-            });
+            catalogFactory.allProducts = function () {
+                return $http.get('/api/products');
+            };
+
+            catalogFactory.getProduct = function (productId) {
+                return $http.get('/api/products/' + productId);
+            };
+
+            return catalogFactory;
     }]);
