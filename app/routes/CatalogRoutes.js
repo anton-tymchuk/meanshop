@@ -8,7 +8,7 @@ var routes = function (Product) {
 
     // Fetch products from a category
     catalogRouter.use('/:catName', function (req, res, next) {
-        Product.findOne({type: req.params.catName}, function (err, categories) {
+        Product.find({type: req.params.catName}, function (err, categories) {
             if (err) {
                 res.status(500).send(err);
             } else if(categories) {
