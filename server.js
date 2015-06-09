@@ -19,9 +19,17 @@ app.use(morgan('dev'));
 app.use(express.static(__dirname + '/public'));
 
 
+// Product Api
 productRouter = require('./app/routes/ProductRoutes')(Product);
 app.use('/api/products', productRouter);
 
+
+// Catalog Api
+catalogRouter = require('./app/routes/CatalogRoutes')(Product);
+app.use('/api/catalog', catalogRouter);
+
+
+// Front end url
 app.get('*', function (req, res) {
     res.sendFile(__dirname + '/public/views/index.html');
 });

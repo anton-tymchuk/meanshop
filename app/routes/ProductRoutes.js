@@ -15,7 +15,7 @@ var routes = function (Product) {
             });
         });
 
-    // Fetch one product
+    // Fetch one product midleware
     productRouter.use('/:productId', function (req, res, next) {
         Product.findOne({sku: req.params.productId}, function (err, product) {
             if (err) {
@@ -32,7 +32,7 @@ var routes = function (Product) {
     productRouter.route('/:productId')
         .get(function (req, res) {
             res.json(req.product);
-        })
+        });
 
     // Add product
     productRouter.route('/addproduct')
@@ -64,7 +64,6 @@ var routes = function (Product) {
                 else {
                     console.log('New Product has been posted');
                 }
-
 
                 res.json({
                     success: true,
