@@ -3,7 +3,7 @@
   <head>
     <base href="/" />
     <meta charset="utf-8">
-    <title>simpla</title>
+    <title>{{header}}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -181,17 +181,20 @@
 
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
         <script src="scripts/app.js"></script>
+
+        <!-- Services -->
+        <script src="scripts/services/productsService.js" charset="utf-8"></script>
+        <script src="scripts/services/categoryService.js" charset="utf-8"></script>
 
         <!-- Controllers -->
         <script src="scripts/controllers/mainCatalogCtrl.js" charset="utf-8"></script>
         <script src="scripts/controllers/catalogCtrl.js" charset="utf-8"></script>
-        <script src="scripts/controllers/productCrtl.js" charset="utf-8"></script>
+        <script src="scripts/controllers/productCtrl.js" charset="utf-8"></script>
+        <script src="scripts/controllers/categoryListCtrl.js" charset="utf-8"></script>
+        <script src="scripts/controllers/categoryCtrl.js" charset="utf-8"></script>
 
-        <!-- Services -->
-        <script src="scripts/services/productsService.js" charset="utf-8"></script>
-        <script src="scripts/services/productService.js" charset="utf-8"></script>
+
 
         <!-- endbuild -->
 

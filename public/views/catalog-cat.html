@@ -4,18 +4,18 @@
             Каталог
         </div>
         <ul ng-repeat="cat in categories">
-            <li><a href="/{{cat}}">{{cat}}</a></li>
+            <li><a href="catalog/{{cat}}">{{cat}}</a></li>
         </ul>
     </div>
 </div>
 <div class="col-md-10">
     <div class="catalog margin-top-35">
         <div class="catalog__title">
-            {{c}}
+            {{type}}
         </div>
         <ul class="catalog__products">
 
-            <li class="catalog__products__item" ng-repeat="product in products">
+            <li class="catalog__products__item" ng-repeat="product in catProducts">
                 <div class="catalog__image" ng-repeat="image in product.images | limitTo:1">
                     <a href="/catalog/{{product.sku}}"><img alt="" ng-src="{{image}}" width="100%" /></a>
                 </div>

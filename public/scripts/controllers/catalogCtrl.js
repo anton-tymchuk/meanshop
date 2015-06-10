@@ -1,11 +1,12 @@
 'use strict';
 
 angular.module('shopApp')
-    .controller('catalogCtrl', function ($scope, Catalog) {
+    .controller('catalogCtrl', function ($rootScope, $scope, Catalog) {
         Catalog.allProducts()
             .success(function (data) {
                 $scope.products = data;
+                $rootScope.header = "Каталог";
             });
     });
 
-console.log('Controller is ok!');
+console.log('Catalog Controller!');

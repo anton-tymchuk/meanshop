@@ -1,10 +1,11 @@
 'use strict';
 
 angular.module('shopApp')
-    .controller('mainCatalogCtrl', function ($scope, Catalog) {
+    .controller('mainCatalogCtrl', function ($rootScope, $scope, Catalog) {
         Catalog.allProducts()
             .success(function (data) {
                 $scope.products = data;
+                $rootScope.header = "My shop App";
             });
     });
 
