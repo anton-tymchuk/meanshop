@@ -3,9 +3,16 @@
         <div class="sidebar__header">
             Каталог
         </div>
+
         <ul ng-repeat="cat in categories">
-            <li><a href="catalog/{{cat}}">{{cat}}</a></li>
+            <li><a href="/{{cat}}">{{cat}}</a></li>
         </ul>
+
+        <h3>Бренды</h3>
+        <ul ng-repeat="brand in brands">
+            <li><a href="#">{{brand}}</a></li>
+        </ul>
+        
     </div>
 </div>
 <div class="col-md-10">

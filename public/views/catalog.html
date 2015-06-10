@@ -1,21 +1,24 @@
 <div class="col-md-2">
-    <div class="sidebar" ng-controller="categoryListCtrl">
+    <div class="sidebar">
         <div class="sidebar__header">
             Каталог
         </div>
-        <ul ng-repeat="cat in categories">
-            <li><a href="/{{cat}}">{{cat}}</a></li>
-        </ul>
+        <cat-list></cat-list>
+
+        <h3>Бренды</h3>
+        <brand-list></brand-list>
+
     </div>
+
 </div>
 <div class="col-md-10">
     <div class="catalog margin-top-35">
         <div class="catalog__title">
-            {{c}}
+            {{header}}
         </div>
         <ul class="catalog__products">
 
-            <li class="catalog__products__item" ng-repeat="product in products">
+            <li class="catalog__products__item" ng-repeat="product in products | filter:brandFilter">
                 <div class="catalog__image" ng-repeat="image in product.images | limitTo:1">
                     <a href="/catalog/{{product.sku}}"><img alt="" ng-src="{{image}}" width="100%" /></a>
                 </div>
