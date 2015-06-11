@@ -1,7 +1,6 @@
 angular.module('shopApp')
     .controller('productCtrl', function ($rootScope, $scope, $routeParams, Catalog) {
 
-        var vm = this;
         var productId = $routeParams.productId;
 
         Catalog.getProduct(productId)
@@ -14,8 +13,24 @@ angular.module('shopApp')
 
         $scope.setBigImage = function (image) {
             $scope.bigImage = image;
-            console.log('Clicked!');
         };
+
+
+        // Cart ===================
+
+        $scope.selectedSize = null;
+
+        $scope.selectSize = function (size) {
+            $scope.selectedSize = $scope.product.details.sizes[size];
+            console.log($scope.selectedSize);
+        }
+
+        $scope.addToCart = function () {
+            if($scope.selectedSize === null){
+                alert('select size!');
+            }
+            console.log('Added!' + $scope.product.title);
+        }
 
         // Test stuff
         $rootScope.alert = function(msg){
