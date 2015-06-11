@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('shopApp', ['ngRoute', 'ngResource']);
+var app = angular.module('shopApp', ['ngRoute']);
 
 angular.module('shopApp')
     .config(function ($routeProvider, $locationProvider) {

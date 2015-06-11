@@ -6937,6 +6937,7 @@ ul {
   position: absolute;
   left: 0;
   width: 100px;
+  z-index: 10;
 }
 .product__image__preview li {
   margin-bottom: 10px;
@@ -6944,9 +6945,10 @@ ul {
 }
 .product__main__image {
   position: relative;
-  padding-left: 110px;
+  margin-left: 110px;
   top: 0;
   width: auto;
+  z-index: 5;
 }
 .product__main__image img {
   width: 100%;

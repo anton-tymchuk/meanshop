@@ -1,21 +1,9 @@
 
 <div class="col-md-12">
     <div class="product">
-        <div class="product__image">
 
-            <div class="product__image__preview">
-                <ul>
-                    <li ng-repeat="image in product.images">
-                        <img ng-src="{{image}}" width="100px;" alt="" />
-                    </li>
-                </ul>
-            </div>
+        <product-images></product-images>
 
-            <div class="product__main__image" ng-repeat="image in product.images | limitTo:1">
-                <img ng-src="{{image}}" alt="" />
-            </div>
-
-        </div>
         <div class="product__anotation">
             <div class="product__anotation__content">
 
