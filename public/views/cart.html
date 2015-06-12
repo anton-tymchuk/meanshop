@@ -1,16 +1,79 @@
-<h1>В корзине {{cartLenght}} товара</h1>
 
-<table>
-    <tr ng-repeat="item in cartProducts">
-        <td ng-repeat="image in item.image" >
-            <img ng-src="{{image}}" alt="" width="75px;"/>
-        </td>
-        <td>
-            {{item.title}}
-            <b>{{item.brand}}</b> ({{item.size}} размер)
-        </td>
-        <td>
-            {{item.price}} грн
-        </td>
-    </tr>
-</table>
+
+<div class="col-md-12">
+
+    <div class="cart">
+        <h1>В корзине {{cartLenght}} товара</h1>
+        <div class="cart__left">
+            <table class="cart__table">
+                <tr>
+                    <th>
+                        Описание товара
+                    </th>
+                    <th>
+                        Цена
+                    </th>
+                </tr>
+                <tr ng-repeat="item in cartProducts">
+                    <td>
+                        <div class="cart__table__image">
+                            <img ng-src="{{item.image}}" alt="" width="80px;"/>
+                        </div>
+
+                        <div class="cart__table__title">
+                            <div class="cart__table__title__name">
+                                {{item.title}} <strong>{{item.brand}}</strong>
+                            </div>
+                            <ul>
+                                <li><label>Цвет</label> <span>{{item.color}}</span></li>
+                                <li><label>Размер</label> <span>{{item.size}}</span></li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cart__table__price">
+                            {{item.price}} <span>грн</span>
+                        </div>
+                        <div class="cart__table__remove">
+                            <a href="#">
+                                <span class="glyphicon glyphicon-remove"></span>
+                                удалить из корзины
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="cart__right">
+            <div class="cart__summary">
+                <div class="cart__summary__title">
+                    Итоговая стоимость
+                </div>
+
+
+                    <div class="cart__summary__coupon">
+                         <label>Введите купон на скидку:</label>
+                         <input type="text" name="name" value="">
+                         <input type="button" name="name" value="ok" class="btn">
+                    </div>
+                    <div class="cart__summary__sum_info">
+                        <ul>
+                            <li>Подитог: <span> <b>2 300 грн</b></span></li>
+                            <li>Скидка: <span class="">-200 грн (15%)</span></li>
+                            <li>Доставка: <span> <b>бесплатно</b></span></li>
+                        </ul>
+                    </div>
+                    <div class="cart__summary__sum">
+                        <span>Итого:</span>
+                        <strong>5 700</strong> <i>грн</i>
+                    </div>
+                    <div class="cart__summary__confirm">
+                        <a href="#" class="btn btn__large ">далее</a>
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>

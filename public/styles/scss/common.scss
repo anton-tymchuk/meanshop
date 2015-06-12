@@ -6,3 +6,26 @@ $link-hover: orange;
 
 $black: #000;
 $secondary-color: lighten($black, 30%);
+
+
+.btn{
+    background: none;
+    border: 3px solid $black;
+    border-radius: 10px;
+    text-align: center;
+    color:$black;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:hover{
+        background: #fff;
+        color: $black;
+        border-color: $link-hover;
+        transition: all 0.3s ease;
+    }
+
+    &__large{
+        padding: 15px 20px;
+    }
+}

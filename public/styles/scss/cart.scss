@@ -1,0 +1,206 @@
+@import "common.scss";
+
+.cart{
+
+    h1{
+        text-transform: uppercase;
+        font-size: 1.25em;
+        color: lighten($black, 20%);
+        font-weight: normal;
+    }
+
+    &__left{
+        width:75%;
+        float:left;
+    }
+
+    &__right{
+        float: right;
+        width: 22%;
+        border: 2px solid gray;
+    }
+
+    &__table{
+
+        width:100%;
+
+        th{
+            padding: 15px;
+            border: 1px solid #efefef;
+            text-transform: uppercase;
+            font-size: 0.875em;
+            color: lighten($black, 20%);
+        }
+
+        td{
+            padding: 15px;
+            border: 1px solid #efefef;
+            vertical-align: top;
+            position: relative;
+        }
+
+        &__image{
+            position: relative;
+            display: inline-block;
+        }
+
+        &__title{
+            display: inline-block;
+            position: relative;
+            left:15px;
+            top:5px;
+            color: lighten($black, 50%);
+
+            strong{
+                color:$black;
+            }
+
+            &__name{
+                text-transform: uppercase;
+            }
+
+            ul{
+                list-style: none;
+                margin-top: 10px;
+                font-size: 0.875em;
+
+                label{
+                    width: 100px;
+                    font-weight: normal;
+                }
+                span{
+                    color:$black;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        &__price{
+            font-size: 1.25em;
+            font-weight: bold;
+            position: relative;
+
+            span{
+                font-size: 1em;
+            }
+        }
+
+        &__remove{
+            top:15px;
+            position: relative;
+            font-size: 14px;
+
+            span{
+                position: relative;
+                top:2px;
+                padding: 5px 5px;
+                font-size: 13px;
+                border: 1px solid #ccc;
+                border-radius: 50%;
+            }
+
+            a{
+                color: lighten($black, 70%);
+
+                &:hover span{
+                    border-color: orange;
+                }
+            }
+        }
+
+    }
+
+    &__summary{
+        background-color: #f8f8f8;
+
+        &__title{
+            text-transform: uppercase;
+            padding: 10px 15px;
+            padding-top:15px;
+            border-bottom:1px solid #ebebeb;
+        }
+
+
+        &__coupon{
+            border-bottom: 1px solid #ebebeb;
+            padding: 15px;
+
+            label{
+                font-weight: normal;
+                font-size: 0.875em;
+                color: $secondary-color;
+            }
+
+            input[type="text"]{
+                height: 35px;
+                border-radius: 5px;
+                border:1px solid #ebebeb;
+                padding-left:10px;
+            }
+
+            input[type="button"]{
+                font-size: 0.8em;
+                border-width: 2px;
+                margin-top:-3px;
+                background-color: #fff;
+            }
+        }
+
+        &__sum_info{
+            padding: 15px;
+            font-size: 0.875em;
+            border-bottom: 1px solid #ebebeb;
+            ul{
+                list-style: none;
+                color: $secondary-color;
+            }
+            li{
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            span{
+                float: right;
+                color:$black;
+            }
+        }
+
+        &__sum{
+            text-align: center;
+            padding: 25px 15px;
+            padding-bottom: 5px;
+
+            span{
+                width: 100%;
+                float: left;
+                margin-bottom: 10px;
+                color: $secondary-color;
+                font-size: 0.875em;
+            }
+
+            strong{
+                font-size: 2em;
+                line-height: 1em;
+            }
+
+            i{
+                font-size: 1.5em;
+                font-style: normal;
+                font-weight: bold;
+            }
+        }
+
+        &__confirm{
+            padding: 15px;
+            text-align: center;
+            padding-bottom: 25px;
+
+            .btn{
+                width: 80%;
+                margin: 0 auto;
+                background-color: #fff;
+                border-width: 2px;
+            }
+        }
+    }
+}
