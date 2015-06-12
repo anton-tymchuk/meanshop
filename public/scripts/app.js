@@ -17,10 +17,15 @@ angular.module('shopApp')
                 templateUrl: '../views/product.html',
                 controller: 'productCtrl'
             })
+            .when('/cart', {
+                templateUrl: '../views/cart.html',
+                controller: 'cartCtrl'
+            })
             .when('/:catName', {
                 templateUrl: '../views/catalog-cat.html',
                 controller: 'categoryCtrl'
             })
+
             .otherwise({redirectTo: "/"});
 
         $locationProvider.html5Mode(true);

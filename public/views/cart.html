@@ -1,0 +1,16 @@
+<h1>В корзине {{cartLenght}} товара</h1>
+
+<table>
+    <tr ng-repeat="item in cartProducts">
+        <td ng-repeat="image in item.image" >
+            <img ng-src="{{image}}" alt="" width="75px;"/>
+        </td>
+        <td>
+            {{item.title}}
+            <b>{{item.brand}}</b> ({{item.size}} размер)
+        </td>
+        <td>
+            {{item.price}} грн
+        </td>
+    </tr>
+</table>
