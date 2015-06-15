@@ -7,23 +7,23 @@ angular.module('shopApp')
         $routeProvider
             .when('/', {
                 templateUrl: '../views/main.html',
-                controller: 'mainCatalogCtrl'
+                controller: 'productsCtrl'
             })
             .when('/catalog', {
                 templateUrl: '../views/catalog.html',
-                controller: 'catalogCtrl'
+                controller: 'productsCtrl'
             })
             .when('/catalog/:productId', {
-                templateUrl: '../views/product.html',
+                templateUrl: '../scripts/product/product.html',
                 controller: 'productCtrl'
             })
             .when('/cart', {
-                templateUrl: '../views/cart.html',
+                templateUrl: '../scripts/cart/cart.html',
                 controller: 'cartCtrl'
             })
             .when('/:catName', {
                 templateUrl: '../views/catalog-cat.html',
-                controller: 'categoryCtrl'
+                controller: 'categoriesCtrl'
             })
 
             .otherwise({redirectTo: "/"});

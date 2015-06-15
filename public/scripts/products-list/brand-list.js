@@ -3,6 +3,6 @@ angular.module('shopApp')
         return {
             restrict: 'E',
             templateUrl: '../../views/brand-list.html',
-            controller: 'categoryListCtrl'
+            // controller: 'categoriesCtrl'
         }
     });

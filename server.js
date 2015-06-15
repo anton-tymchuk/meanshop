@@ -31,7 +31,7 @@ app.use('/api/catalog', catalogRouter);
 
 // Front end url
 app.get('*', function (req, res) {
-    res.sendFile(__dirname + '/public/views/index.html');
+    res.sendFile(__dirname + '/public/index.html');
 });
 
 

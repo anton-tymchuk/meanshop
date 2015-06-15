@@ -1,5 +1,5 @@
 angular.module('shopApp')
-    .controller('productCtrl', function ($rootScope, $scope, $routeParams, Catalog) {
+    .controller('productCtrl', ['$rootScope','$scope','$routeParams', 'Catalog', function ($rootScope, $scope, $routeParams, Catalog) {
 
         var productId = $routeParams.productId;
 
@@ -16,15 +16,15 @@ angular.module('shopApp')
         };
 
 
-        // Cart ===================
+        // Add to cart
 
         // Select size method
         $scope.selectedSize = null;
         $scope.selectSize = function (size) {
             $scope.selectedSize = $scope.product.details.sizes[size];
-            // console.log($scope.selectedSize);
         }
 
+        // Create cart product object
         $scope.cartProduct = {};
         function addProduct(){
             var product = {};
@@ -50,6 +50,7 @@ angular.module('shopApp')
             updateStorageCart($scope.cartProduct);
         }
 
+        // Set cart array to localStorage
         function updateStorageCart(data){
             var arr;
             if(localStorage.getItem('cart') === null){
@@ -57,16 +58,10 @@ angular.module('shopApp')
             } else {
                 arr = JSON.parse(localStorage.getItem('cart'));
             }
-
             arr.push(data);
 
-            console.log(arr);
+            console.log('Products in the cart' + arr);
             localStorage.setItem('cart', JSON.stringify(arr))
         }
 
-        // Test stuff
-        // $rootScope.alert = function(msg){
-        //     alert(msg);
-        // }
-        // -----
-    });
+    }]);

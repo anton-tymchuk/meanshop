@@ -3,6 +3,5 @@ angular.module('shopApp')
         return {
             restrict: 'E',
             templateUrl: '../../views/product-images.html',
-            controller: 'productCtrl'
         }
     });
