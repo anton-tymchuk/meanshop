@@ -1,5 +1,3 @@
-
-
 <div class="col-md-12">
 
     <div class="cart">
@@ -35,7 +33,7 @@
                             {{item.price}} <span>грн</span>
                         </div>
                         <div class="cart__table__remove">
-                            <a href="#">
+                            <a href="#"ng-click="removeFromCart($index)">
                                 <span class="glyphicon glyphicon-remove"></span>
                                 удалить из корзины
                             </a>
@@ -58,17 +56,17 @@
                     </div>
                     <div class="cart__summary__sum_info">
                         <ul>
-                            <li>Подитог: <span> <b>2 300 грн</b></span></li>
+                            <li>Подитог: <span> <b>{{cartSummary}} грн</b></span></li>
                             <li>Скидка: <span class="">-200 грн (15%)</span></li>
                             <li>Доставка: <span> <b>бесплатно</b></span></li>
                         </ul>
                     </div>
                     <div class="cart__summary__sum">
                         <span>Итого:</span>
-                        <strong>5 700</strong> <i>грн</i>
+                        <strong>{{cartSummary}}</strong> <i>грн</i>
                     </div>
                     <div class="cart__summary__confirm">
-                        <a href="#" class="btn btn__large ">далее</a>
+                        <a href="#" class="btn btn__large" ng-click="">далее</a>
                     </div>
 
 

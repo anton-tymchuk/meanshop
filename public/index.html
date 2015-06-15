@@ -21,44 +21,7 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-  <div class="header--static header">
-    <div class="container-fluid">
-
-      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2">
-        <div class="header__logo--static">
-            <a href="/"><img src="http://placehold.it/200x100" alt=""></a>
-
-        </div>
-        <div class="header__logo--fixed"><img src="http://placehold.it/75x50" alt=""></div>
-      </div>
-
-      <div class="col-xs-6 col-sm-6 col-md-7 col-lg-8">
-        <div class="header__menu">
-          <ul>
-            <li><a href="">Collection</a></li>
-            <li><a href="/catalog">Catalog</a></li>
-            <li сlass="header--hidden"><a href="">Sale</a></li>
-            <li><a href="">My Purchases</a></li>
-            <li сlass="header--hidden"><a href="">Contacts</a></li>
-            <li><a href="">Popular</a></li>
-          </ul>
-        </div>
-        <div class="header__phone">
-          <b>+38 066 163-12-22</b> <span class="header__phone__span"> — прием заказов с 9:00 до 21:00</span>
-        </div>
-
-      </div>
-
-      <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        <div class="header__cart">
-          <span class="glyphicon glyphicon-shopping-cart"></span>
-          <span class="header--hidden"> В <a href="/cart">Корзине</a> </span> 2 товара <span class="header--hidden">на:</span> 2 450 грн.
-        </div>
-      </div>
-
-
-    </div>
-  </div>
+  <app-header></app-header>
 
   <div class="header--fixed header" style="display:none">
     <div class="container-fluid">
@@ -182,12 +145,16 @@
         <!-- Cart -->
         <script src="scripts/cart/cartCtrl.js" charset="utf-8"></script>
         <script src="scripts/cart/add-to-cart.js" charset="utf-8"></script>
+        <script src="scripts/cart/cart-informer.js" charset="utf-8"></script>
 
         <!--  Product lists -->
         <script src="scripts/products-list/categoriesCtrl.js" charset="utf-8"></script>
         <script src="scripts/products-list/productsCtrl.js" charset="utf-8"></script>
         <script src="scripts/products-list/cat-list.js" charset="utf-8"></script>
         <script src="scripts/products-list/brand-list.js" charset="utf-8"></script>
+
+        <!-- Shared -->
+        <script src="scripts/shared/app-header.js" charset="utf-8"></script>
 
         <!-- endbuild -->
 
