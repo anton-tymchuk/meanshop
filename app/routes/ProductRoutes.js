@@ -3,37 +3,6 @@ var express = require('express');
 var routes = function (Product) {
     var productRouter = express.Router();
 
-    // Fetch all products
-    productRouter.route('/')
-        .get(function (req, res) {
-            Product.find({}, function (err, products) {
-                if(err) {
-                    res.send.err;
-                    return;
-                }
-                res.json(products);
-            });
-        });
-
-    // Fetch one product midleware
-    productRouter.use('/:productId', function (req, res, next) {
-        Product.findOne({sku: req.params.productId}, function (err, product) {
-            if (err) {
-                res.status(500).send(err);
-            } else if(product) {
-                req.product = product;
-                next();
-            } else {
-                res.status(404).send('Product not found')
-            }
-        });
-    })
-
-    productRouter.route('/:productId')
-        .get(function (req, res) {
-            res.json(req.product);
-        });
-
     // Add product
     productRouter.route('/addproduct')
         .post(function (req, res) {
@@ -67,10 +36,42 @@ var routes = function (Product) {
 
                 res.json({
                     success: true,
-                    pfoduct: newProduct
+                    product: newProduct
                 });
             });
         });
+
+    // Fetch all products
+    productRouter.route('/')
+        .get(function (req, res) {
+            Product.find({}, function (err, products) {
+                if(err) {
+                    res.send.err;
+                    return;
+                }
+                res.json(products);
+            });
+        });
+
+    // Fetch one product midleware
+    productRouter.use('/:productId', function (req, res, next) {
+        Product.findOne({sku: req.params.productId}, function (err, product) {
+            if (err) {
+                res.status(500).send(err);
+            } else if(product) {
+                req.product = product;
+                next();
+            } else {
+                res.status(404).send('Product not found')
+            }
+        });
+    })
+
+    productRouter.route('/:productId')
+        .get(function (req, res) {
+            res.json(req.product);
+        });
+
 
     return productRouter;
 };

@@ -11,6 +11,7 @@ var db = mongoose.connect(config.DB, function (err) {
     });
 
 var Product = require('./app/models/Product');
+    Order = require('./app/models/Orders');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -23,11 +24,13 @@ app.use(express.static(__dirname + '/public'));
 productRouter = require('./app/routes/ProductRoutes')(Product);
 app.use('/api/products', productRouter);
 
-
 // Catalog Api
 catalogRouter = require('./app/routes/CatalogRoutes')(Product);
 app.use('/api/catalog', catalogRouter);
 
+// Orders Api
+ordersRouter = require('./app/routes/OrderRoutes')(Order)
+app.use('/api/orders', ordersRouter);
 
 // Front end url
 app.get('*', function (req, res) {
