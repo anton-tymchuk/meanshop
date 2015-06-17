@@ -53,7 +53,7 @@ a{
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
+ 
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -68,4 +68,9 @@ a{
 .footer {
   color: #777;
   border-top: 1px solid #e5e5e5;
+}
+
+.active{
+    background: #000;
+    position: fixed;
 }

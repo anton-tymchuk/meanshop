@@ -1,3 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300,700&subset=cyrillic,latin);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300,700&subset=cyrillic,latin);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300,700&subset=cyrillic,latin);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300,700&subset=cyrillic,latin);
 .btn {
   background: none;
   border: 3px solid #000;
@@ -29,9 +33,11 @@ ul {
 }
 
 .header {
-  margin: 0 0 15px 0;
-  background: #efefef;
+  margin: 0 0 25px 0;
   width: 100%;
+}
+.header__logo--static {
+  margin-top: 6px;
 }
 .header__menu {
   position: absolute;
@@ -43,7 +49,7 @@ ul {
   margin-right: 20px;
 }
 .header__phone {
-  color: #8d8d8d;
+  color: #000;
   position: absolute;
 }
 .header__phone__span {
@@ -56,10 +62,11 @@ ul {
 }
 .header__cart {
   position: absolute;
-  top: 30px;
+  top: 60px;
   right: 0;
   font-size: 0.9375em;
   padding-left: 20px;
+  padding-right: 15px;
 }
 .header__cart .glyphicon-shopping-cart {
   position: absolute;
@@ -69,17 +76,43 @@ ul {
 
 .header--static {
   height: 100px;
+  position: relative;
+  padding-top: 10px;
 }
-.header--static .header__logo--fixed {
-  display: none;
+.header--static:after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+  border-top: solid 1px #efefef;
+  z-index: -1;
+}
+.header--static .header {
+  padding-top: 10px;
 }
 .header--static .header__phone {
   font-size: 1.125em;
-  top: 25px;
+  top: 20px;
 }
 
 .header--fixed {
   height: 50px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: #ffc941;
+  border: none;
+  padding-top: 0;
+  -webkit-transition: all .2s ease;
+          transition: all .2s ease;
+}
+.header--fixed:after {
+  content: "";
+  border-top: none;
+}
+.header--fixed .header {
+  padding-top: 0;
 }
 .header--fixed .header a {
   color: #000;
@@ -110,6 +143,10 @@ ul {
 }
 .header--fixed .header__cart {
   top: 16px;
+}
+
+.fixed-header-fix {
+  padding-top: 127px;
 }
 
 .promo {
@@ -201,6 +238,7 @@ ul {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 15px;
+  font-family: "Roboto Slab", serif;
 }
 .catalog__image {
   -webkit-transition: all 0.3s ease-in-out;
@@ -247,6 +285,8 @@ ul {
   font-size: 18px;
   text-align: center;
   text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 10px;
 }
 .catalog__name a {
   font-weight: bold;
@@ -254,12 +294,12 @@ ul {
           transition: all 0.3s ease-in-out;
 }
 .catalog__price {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
-}
-.catalog__price--new {
-  color: orange;
-  font-weight: bold;
+  font-family: "Roboto Slab", serif;
+  font-weight: .catalog__price --new;
+  font-weight-color: orange;
+  font-weight-font-weight: bold;
 }
 .catalog__price--old {
   text-decoration: line-through;
@@ -390,10 +430,10 @@ ul {
 .product h1 {
   font-size: 1.875em;
   line-height: 1.2em;
-  font-weight: bold;
   text-transform: uppercase;
   text-align: center;
   color: #999999;
+  font-family: "Roboto Slab", serif;
 }
 .product h1 span {
   color: #000;
@@ -401,6 +441,7 @@ ul {
 .product__price {
   font-size: 1.25em;
   text-align: center;
+  font-family: "Roboto Slab", serif;
 }
 .product__description {
   border-top: 1px solid #ccc;
@@ -424,9 +465,26 @@ ul {
   border-radius: 50%;
   margin-right: 10px;
   border: 3px solid gray;
+  cursor: pointer;
+}
+.product__size__select:hover {
+  border-color: orange;
 }
 .product__size__select:last-child {
   margin-right: 0;
+}
+.product__size__select--selected {
+  border-color: orange;
+  color: orange;
+}
+.product__size__select a {
+  text-decoration: none;
+}
+.product__size__select a:hover {
+  text-decoration: none;
+}
+.product__size__select a:focus, .product__size__select a:active {
+  text-decoration: none;
 }
 .product__size__grid {
   position: relative;
@@ -452,6 +510,7 @@ ul {
   padding-left: 15px;
   position: relative;
   font-size: 0.9em;
+  top: 2px;
   text-transform: uppercase;
   margin-right: -0.3em;
 }
@@ -460,6 +519,7 @@ ul {
   box-sizing: border-box;
   display: inline-block;
   padding-right: 10px;
+  font-family: "Roboto Slab", serif;
 }
 
 .additional__info {
@@ -472,10 +532,10 @@ ul {
   padding-right: 2%;
 }
 .additional__info__delivery__icon {
-  background: url("../images/icons.png") 0 0 no-repeat;
+  background: url("../../images/icons.png") 0 0 no-repeat;
   width: 42px;
-  height: 20px;
-  margin-bottom: 10px;
+  height: 18px;
+  margin-bottom: 12px;
 }
 .additional__info__try {
   width: 31%;
@@ -483,17 +543,17 @@ ul {
   float: left;
 }
 .additional__info__try__icon {
-  background: url("../images/icons.png") 0 -18px no-repeat;
+  background: url("../../images/icons.png") 0 -18px no-repeat;
   width: 42px;
-  height: 22px;
-  margin-bottom: 8px;
+  height: 20px;
+  margin-bottom: 10px;
 }
 .additional__info__return {
   width: 32%;
   float: left;
 }
 .additional__info__return__icon {
-  background: url("../images/icons.png") 0 -38px no-repeat;
+  background: url("../../images/icons.png") 0 -38px no-repeat;
   width: 42px;
   height: 22px;
   margin-bottom: 8px;
@@ -688,6 +748,55 @@ ul {
   border-width: 2px;
 }
 
+.cart__modal {
+  position: fixed;
+  width: 400px;
+  z-index: 100;
+  bottom: 25px;
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0px 5px 8px 0px rgba(138, 138, 138, 0.8);
+}
+.cart__modal--close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: #fff;
+  padding: 5px 8px;
+  border-radius: 50%;
+}
+.cart__modal__image {
+  float: left;
+  margin-right: 15px;
+}
+.cart__modal__sku {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666666;
+}
+.cart__modal__name {
+  text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.cart__modal__price {
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 10px;
+}
+.cart__modal__text {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.cart__modal .btn {
+  width: 170px;
+  border-width: 2px;
+  font-size: 13px;
+}
+.cart__modal--hidden {
+  display: none;
+}
+
 .margin-top-5 {
   margin-top: 5px;
 }
@@ -733,7 +842,6 @@ a:hover {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
   /* Make the masthead heading the same height as the navigation */
 }
 .header h3 {
@@ -747,4 +855,9 @@ a:hover {
 .footer {
   color: #777;
   border-top: 1px solid #e5e5e5;
+}
+
+.active {
+  background: #000;
+  position: fixed;
 }

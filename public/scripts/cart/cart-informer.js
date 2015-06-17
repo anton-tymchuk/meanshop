@@ -1,5 +1,5 @@
-'use strict';
-(function () {
+;(function () {
+    'use strict';
     angular.module('shopApp')
         .directive('cartInformer', function () {
             return {

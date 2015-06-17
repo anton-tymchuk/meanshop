@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./styles/css/main.css">
     <!-- endbuild -->
   </head>
-  <body>
+  <body ng-class="{'fixed-header-fix':!bigHeader}">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -146,6 +146,7 @@
         <script src="scripts/cart/cartCtrl.js" charset="utf-8"></script>
         <script src="scripts/cart/add-to-cart.js" charset="utf-8"></script>
         <script src="scripts/cart/cart-informer.js" charset="utf-8"></script>
+        <script src="scripts/cart/add-to-cart-modal.js" charset="utf-8"></script>
 
         <!--  Product lists -->
         <script src="scripts/products-list/categoriesCtrl.js" charset="utf-8"></script>

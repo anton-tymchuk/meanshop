@@ -13,6 +13,7 @@
         font-weight: bold;
         text-transform: uppercase;
         margin-bottom: 15px;
+        font-family: $custom-font;
     }
 
     &__image{
@@ -39,7 +40,7 @@
                 margin-left: 0;
             }
 
-            &:hover .catalog__products__item_annotation a{
+            &:hover .catalog__products__item_annotation a {
                 color:$link-hover;
                 transition: all 0.3s ease;
                 transition: all 0.3s ease-in-out;
@@ -63,6 +64,8 @@
         font-size:18px;
         text-align: center;
         text-transform: uppercase;
+        font-family: $custom-font;
+        margin-bottom: 10px;
 
         a{
             font-weight: bold;
@@ -71,8 +74,10 @@
     }
 
     &__price{
-        font-size: 14px;
+        font-size: 16px;
         text-align: center;
+        font-family: $custom-font;
+        font-weight:
 
         &--new{
             color: orange;

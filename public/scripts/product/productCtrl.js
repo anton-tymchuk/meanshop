@@ -21,8 +21,9 @@
 
             // Select size method
             $scope.selectedSize = null;
-            $scope.selectSize = function (size) {
-                $scope.selectedSize = $scope.product.details.sizes[size];
+            $scope.selectSize = function (index, event) {
+                $scope.selected = index;
+                $scope.selectedSize = $scope.product.details.sizes[index];
             }
 
             // Create cart product object
@@ -42,27 +43,32 @@
             }
 
             // Add to cart method
+
             $scope.addToCart = function(){
+
                 if($scope.selectedSize === null){
                     alert('select size!');
                 }else{
                     addProduct();
                     updateStorageCart(_cartProduct);
+
+                    // Show cart modal -> true
+                    $scope.closed = false;
                 }
             }
 
             // Set cart array to localStorage
             function updateStorageCart(data){
-                var arr;
+                var cartArray;
                 if(localStorage.getItem('cart') === null){
-                    arr = [];
+                    cartArray = [];
                 } else {
-                    arr = JSON.parse(localStorage.getItem('cart'));
+                    cartArray = JSON.parse(localStorage.getItem('cart'));
                 }
-                arr.push(data);
+                cartArray.push(data);
 
-                console.log('Products in the cart' + arr);
-                localStorage.setItem('cart', JSON.stringify(arr))
+                console.log('Products in the cart' + cartArray);
+                localStorage.setItem('cart', JSON.stringify(cartArray))
             }
 
         }]);

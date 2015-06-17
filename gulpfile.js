@@ -30,7 +30,7 @@ gulp.task('watch', function() {
   gulp.watch('public/styles/scss/*.scss', ['styles']);
 
   // Watch .js files
-  gulp.watch('public/scripts/**/*.js', ['scripts']);
+  // gulp.watch('public/scripts/**/*.js', ['scripts']);
 
   livereload.listen();
 

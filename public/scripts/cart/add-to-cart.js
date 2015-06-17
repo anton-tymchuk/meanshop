@@ -5,6 +5,6 @@
             return {
                 restrict: 'E',
                 templateUrl: '../../views/add-to-cart.html'
-            }
-        });    
-}())
+            };
+        });
+}());

@@ -15,9 +15,14 @@ ul{
 }
 
 .header{
-    margin: 0 0 15px 0;
-    background: #efefef;
+    margin: 0 0 25px 0;
     width: 100%;
+
+    &__logo{
+        &--static{
+            margin-top:6px;
+        }
+    }
 
     &__menu{
         position: absolute;
@@ -32,7 +37,7 @@ ul{
     }
 
     &__phone{
-        color: $primary-color;
+        color: $black;
         position: absolute;
 
         &__span{
@@ -49,10 +54,11 @@ ul{
 
     &__cart{
         position: absolute;
-        top: 30px;
+        top: 60px;
         right:0;
         font-size: $base-font;
         padding-left: 20px;
+        padding-right: 15px;
 
         .glyphicon-shopping-cart{
             position: absolute;
@@ -64,24 +70,47 @@ ul{
 
 .header--static{
     height: 100px;
+    position: relative;
+    padding-top: 10px;
+
+    &:after{
+        content:"";
+        position:absolute;
+        top:60%;
+        left:0;
+        right:0;
+        border-top:solid 1px #efefef;
+        z-index:-1;
+    }
 
     .header{
-
-        &__logo--fixed{
-            display: none;
-        }
+        padding-top: 10px;
 
         &__phone{
             font-size: 1.125em;
-            top: 25px;
+            top: 20px;
         }
     }
 }
 
 .header--fixed{
      height: 50px;
+     position: fixed;
+     top:0;
+     z-index: 100;
+     background-color: #ffc941;
+     border:none;
+     padding-top: 0;
+     transition: all .2s ease;
+
+     &:after{
+         content:"";
+         border-top:none;
+     }
+
 
     .header{
+        padding-top: 0;
 
         a{
             color: $black;
@@ -119,4 +148,7 @@ ul{
             top:16px;
         }
     }
+}
+.fixed-header-fix{
+    padding-top: 127px;
 }

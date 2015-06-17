@@ -1,9 +1,21 @@
 'use strict';
 (function () {
     angular.module('shopApp')
-        .directive('appHeader', function () {
+        .directive('appHeader', function ($window) {
             return {
-                templateUrl: '../../views/app-header.html'
+                templateUrl: '../../views/app-header.html',
+                link: function (scope, element, attrs) {
+                    scope.bigHeader = true;
+
+                    angular.element($window).bind('scroll', function () {
+                        if(this.pageYOffset >= 100){
+                            scope.bigHeader = false;
+                        }else{
+                            scope.bigHeader = true;
+                        }
+                        scope.$apply();
+                    })
+                }
             }
         })
 }());

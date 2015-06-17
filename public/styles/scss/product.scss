@@ -55,10 +55,10 @@
     h1{
         font-size: 1.875em;
         line-height: 1.2em;
-        font-weight: bold;
         text-transform: uppercase;
         text-align: center;
         color: lighten($black, 60%);
+        font-family: $custom-font;
 
         span{
             color: $black;
@@ -68,6 +68,7 @@
     &__price{
         font-size: 1.25em;
         text-align: center;
+        font-family: $custom-font;
     }
 
     &__description{
@@ -97,9 +98,28 @@
         border-radius: 50%;
         margin-right: 10px;
         border:3px solid lighten($black, 50%);
+        cursor: pointer;
+
+        &:hover{
+            border-color: orange;
+        }
 
         &:last-child{
             margin-right: 0;
+        }
+
+        &--selected{
+            border-color:orange;
+            color:orange;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        a:focus, a:active{
+            text-decoration: none;
         }
 
     }
@@ -132,6 +152,7 @@
             padding-left: 15px;
             position: relative;
             font-size:0.9em;
+            top:2px;
             text-transform: uppercase;
             margin-right: -0.3em;
         }
@@ -141,6 +162,7 @@
             box-sizing: border-box;
             display: inline-block;
             padding-right: 10px;
+            font-family: $custom-font;
         }
 
     }
@@ -158,10 +180,10 @@
         padding-right: 2%;
 
         &__icon{
-            background: url('../images/icons.png') 0 0 no-repeat;
+            background: url('../../images/icons.png') 0 0 no-repeat;
             width: 42px;
-            height: 20px;
-            margin-bottom: 10px;
+            height: 18px;
+            margin-bottom: 12px;
         }
     }
 
@@ -171,10 +193,10 @@
         float: left;
 
         &__icon{
-            background: url('../images/icons.png') 0 -18px no-repeat;
+            background: url('../../images/icons.png') 0 -18px no-repeat;
             width: 42px;
-            height: 22px;
-            margin-bottom: 8px;
+            height: 20px;
+            margin-bottom: 10px;
         }
     }
 
@@ -183,7 +205,7 @@
         float: left;
 
         &__icon{
-            background: url('../images/icons.png') 0 -38px no-repeat;
+            background: url('../../images/icons.png') 0 -38px no-repeat;
             width: 42px;
             height: 22px;
             margin-bottom: 8px;
