@@ -3,13 +3,13 @@ var express = require('express');
 var routes = function (Product) {
     var catalogRouter = express.Router();
 
-    //TODO: Get brand and category list
+    // Fetch brand and category list
     catalogRouter.route('/')
         .get(function (req, res) {
             Product.find({}, function (err, cats) {
 
                 var listingObj = {
-                    categories: getList(cats, 'type'), 
+                    categories: getList(cats, 'type'),
                     brands: getList(cats, 'brand')
                 };
 
@@ -26,7 +26,7 @@ var routes = function (Product) {
                 req.categories = categories;
                 next();
             } else {
-                res.status(404).send('Products not found')
+                res.status(404).send('Products not found');
             }
         });
     })

@@ -3,6 +3,7 @@ var express = require('express');
 var routes = function (Order) {
     var ordersRouter = express.Router();
 
+
     // Fetch all orders
     ordersRouter.route('/')
         .get(function (req, res) {
@@ -15,9 +16,31 @@ var routes = function (Order) {
             });
         });
 
+
+
+    // Create new Order
+    var idCount = 0; // count number of orders
+    var urlHash; // order url hash
+
+    ordersRouter.use('/new-order', function (req, res, next) {
+
+        // Count orders
+        Order.count({}, function(err, count){
+            idCount = count;
+            console.log('Count is: ' + count);
+        });
+
+        // Genereate url hash
+        var length = 30;
+        urlHash = Math.random().toString(33).substr(2, length);
+
+        next();
+    })
+
     // Add new order
     ordersRouter.route('/new-order')
         .post(function (req, res) {
+
             var newOrder = new Order({
                 customerInfo: {
                     name: req.body.sku,
@@ -28,8 +51,7 @@ var routes = function (Order) {
                 },
                 orderInfo: {
                     date: new Date,
-                    // TODO: geterete it from mongo
-                    id: 1,
+                    id: idCount,
                     status: 'New',
                     sum: req.body.sum,
                     discount: req.body.discount,
@@ -43,8 +65,7 @@ var routes = function (Order) {
                     },
                     coupon: req.body.coupon,
                     annotation: req.body.annotation,
-                    // TODO: meke it random
-                    urlHash: 'dDcfdf7dfDFvhdglgl93'
+                    urlHash: urlHash
                 },
                 products: [
                     {
@@ -70,7 +91,9 @@ var routes = function (Order) {
                     order: newOrder
                 })
             });
-        })
+        });
+
+
 
     return ordersRouter;
 }
