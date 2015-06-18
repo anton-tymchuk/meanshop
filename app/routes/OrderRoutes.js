@@ -16,31 +16,45 @@ var routes = function (Order) {
             });
         });
 
+    // Fetch one order
+    ordersRouter.use('/:orderHash', function (req, res, next) {
+        Order.findOne({'orderInfo.urlHash': req.params.orderHash}, function (err, order) {
+            if (err){
+                res.status(500).send(err);
+            } else if(order) {
+                req.order = order;
+                next();
+            } else {
+                res.status(404).send('Order not found');
+            }
+        })
+    })
+
+    ordersRouter.route('/:orderHash')
+        .get(function (req, res) {
+            res.json(req.order)
+        });
 
 
     // Create new Order
-    var idCount = 0; // count number of orders
-    var urlHash; // order url hash
+    var orderHash; // order url hash
+    var idCount; // count number of orders
 
     ordersRouter.use('/new-order', function (req, res, next) {
-
         // Count orders
         Order.count({}, function(err, count){
             idCount = count;
-            console.log('Count is: ' + count);
+            next();
         });
 
         // Genereate url hash
-        var length = 30;
-        urlHash = Math.random().toString(33).substr(2, length);
+        orderHash = Math.random().toString(33).substr(2, 30);
 
-        next();
     })
 
     // Add new order
     ordersRouter.route('/new-order')
         .post(function (req, res) {
-
             var newOrder = new Order({
                 customerInfo: {
                     name: req.body.sku,
@@ -65,7 +79,7 @@ var routes = function (Order) {
                     },
                     coupon: req.body.coupon,
                     annotation: req.body.annotation,
-                    urlHash: urlHash
+                    urlHash: orderHash
                 },
                 products: [
                     {

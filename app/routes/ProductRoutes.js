@@ -62,7 +62,7 @@ var routes = function (Product) {
                 req.product = product;
                 next();
             } else {
-                res.status(404).send('Product not found')
+                res.status(404).send('Product not found');
             }
         });
     })
