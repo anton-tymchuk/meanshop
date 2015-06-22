@@ -2,6 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300,700&subset=cyrillic,latin);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300,700&subset=cyrillic,latin);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300,700&subset=cyrillic,latin);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300,700&subset=cyrillic,latin);
 .btn {
   background: none;
   border: 3px solid #000;
@@ -649,6 +650,12 @@ ul {
 .cart__table__price span {
   font-size: 1em;
 }
+.cart__table__price--old {
+  color: #666666;
+  font-size: 0.8em;
+  text-decoration: line-through;
+  font-weight: normal;
+}
 .cart__table__remove {
   top: 15px;
   position: relative;
@@ -795,6 +802,110 @@ ul {
 }
 .cart__modal--hidden {
   display: none;
+}
+
+.btn {
+  background: none;
+  border: 3px solid #000;
+  border-radius: 10px;
+  text-align: center;
+  color: #000;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.btn:hover {
+  background: #fff;
+  color: #000;
+  border-color: orange;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+}
+.btn__large {
+  padding: 15px 20px;
+}
+
+.order h1 {
+  text-transform: uppercase;
+  font-size: 1.25em;
+  color: #333333;
+  font-weight: normal;
+}
+.order h3 {
+  font-size: 1em;
+  text-transform: uppercase;
+}
+.order__info {
+  padding: 25px;
+  border: 2px solid #ccc;
+  background: #f8f8f8;
+}
+.order__info label {
+  text-transform: uppercase;
+  font-size: 0.8125em;
+  margin-bottom: 10px;
+  color: #333333;
+}
+.order__info input[type="text"], .order__info input[type="email"], .order__info select {
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px 10px;
+  margin-bottom: 25px;
+}
+.order__info textarea {
+  border: 1px solid #ccc;
+  padding: 10px 10px;
+}
+.order__purchased__list {
+  float: left;
+  width: 75%;
+}
+.order__purchased__list table {
+  width: 100%;
+}
+.order__purchased__list th {
+  padding: 15px;
+  border: 1px solid #efefef;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  color: #333333;
+}
+.order__purchased__list td {
+  padding: 15px;
+  border: 1px solid  #efefef;
+  vertical-align: top;
+}
+.order__purchased__image {
+  position: relative;
+  display: inline-block;
+}
+.order__purchased__details {
+  position: relative;
+  display: inline-block;
+  left: 15px;
+  vertical-align: top;
+}
+.order__customer__info {
+  width: 22%;
+  float: right;
+  border: 2px solid gray;
+  margin-top: 45px;
+}
+.order__customer__info table {
+  width: 100%;
+}
+.order__customer__info th {
+  padding: 15px;
+  border: 1px solid #efefef;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  color: #333333;
+}
+.order__customer__info td {
+  padding: 10px  0 10px 15px;
+  font-size: 0.875em;
+  border-bottom: 1px solid #efefef;
 }
 
 .margin-top-5 {

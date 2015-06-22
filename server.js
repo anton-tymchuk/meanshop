@@ -6,11 +6,13 @@ var express = require('express'),
     morgan = require('morgan');
 
 var db = mongoose.connect(config.DB, function (err) {
-        if(err) throw err;
+        if(err) {
+            throw err;
+        }
         console.log('====== conntected ======');
-    });
+});
 
-var Product = require('./app/models/Product');
+var Product = require('./app/models/Product'),
     Order = require('./app/models/Orders');
 
 app.use(bodyParser.json());
@@ -25,7 +27,7 @@ productRouter = require('./app/routes/ProductRoutes')(Product);
 app.use('/api/products', productRouter);
 
 // Catalog Api
-catalogRouter = require('./app/routes/CatalogRoutes')(Product);
+catalogRouter = require('./app/routes/CatalogRoutes.js')(Product);
 app.use('/api/catalog', catalogRouter);
 
 // Orders Api

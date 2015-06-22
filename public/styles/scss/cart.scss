@@ -83,6 +83,13 @@
             span{
                 font-size: 1em;
             }
+
+            &--old{
+                color: lighten($black, 40%);
+                font-size: 0.8em;
+                text-decoration: line-through;
+                font-weight: normal;
+            }
         }
 
         &__remove{

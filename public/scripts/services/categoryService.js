@@ -1,17 +1,13 @@
-'use strict';
 (function () {
     angular.module('shopApp')
-        .factory('Category',['$http',
-            function ($http) {
-                var categoryFactory = {};
-
-                categoryFactory.getCategoryList = function () {
+        .factory('Category',['$http', function ($http) {
+            return{
+                getCategoryList: function () {
                     return $http.get('/api/catalog');
-                };
-                categoryFactory.getCategory = function (catName) {
+                },
+                getCategory: function (catName) {
                     return $http.get('/api/catalog/' + catName);
-                };
-
-                return categoryFactory;
+                }
+            };
         }]);
 }());

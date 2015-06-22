@@ -1,4 +1,4 @@
-;(function () {
+(function () {
     angular.module('shopApp')
         .directive('addToCartModal', function ($timeout) {
             return {
@@ -15,6 +15,6 @@
                         $timeout(scope.closeModal, 3500);
                     });
                 }
-            }
+            };
         });
 }());

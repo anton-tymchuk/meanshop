@@ -1,4 +1,3 @@
-'use strict';
 (function () {
     angular.module('shopApp')
         .directive('appHeader', function ($window) {
@@ -14,8 +13,8 @@
                             scope.bigHeader = true;
                         }
                         scope.$apply();
-                    })
+                    });
                 }
-            }
-        })
+            };
+        });
 }());

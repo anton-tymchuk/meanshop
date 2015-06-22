@@ -31,6 +31,9 @@
                     <td>
                         <div class="cart__table__price">
                             {{item.price}} <span>грн</span>
+                            <div class="cart__table__price--old" ng-if="item.oldPrice !== 0" ng-hide="item.oldPrice === item.price">
+                                {{item.oldPrice}} грн
+                            </div>
                         </div>
                         <div class="cart__table__remove">
                             <a href="#"ng-click="removeFromCart($index)">
@@ -56,17 +59,17 @@
                     </div>
                     <div class="cart__summary__sum_info">
                         <ul>
-                            <li>Подитог: <span> <b>{{cartSummary}} грн</b></span></li>
-                            <li>Скидка: <span class="">-200 грн (15%)</span></li>
+                            <li>Подитог: <span> <b>{{oldPriceSum}} грн</b></span></li>
+                            <li>Скидка: <span class="">{{saleSize}} грн ({{salePercent}}%)</span></li>
                             <li>Доставка: <span> <b>бесплатно</b></span></li>
                         </ul>
                     </div>
                     <div class="cart__summary__sum">
                         <span>Итого:</span>
-                        <strong>{{cartSummary}}</strong> <i>грн</i>
+                        <strong>{{priceSum}}</strong> <i>грн</i>
                     </div>
                     <div class="cart__summary__confirm">
-                        <a href="#" class="btn btn__large" ng-click="">далее</a>
+                        <a href="/order" class="btn btn__large" ng-click="">далее</a>
                     </div>
 
 

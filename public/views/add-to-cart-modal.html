@@ -3,17 +3,17 @@
         <a href="#" ng-click="closeModal()"><span class="glyphicon glyphicon-remove"></span></a>
     </div>
     <div class="cart__modal__image">
-        <img ng-src="{{bigImage}}" width="150px" alt="" />
+        <img ng-src="{{product.item.bigImage}}" width="150px" alt="" />
     </div>
     <div class="cart__modal__anotation">
         <div class="cart__modal__sku">
-            id: <span>102632</span>
+            id: <span>{{product.item.sku}}</span>
         </div>
         <div class="cart__modal__name">
-            {{product.title}} {{product.brand}}
+            {{product.item.title}} {{product.item.brand}}
         </div>
         <div class="cart__modal__price">
-            {{product.pricing.price}} грн
+            {{product.item.pricing.price}} грн
         </div>
             <div class="cart__modal__text">
                 Товар добавлен в корзину.

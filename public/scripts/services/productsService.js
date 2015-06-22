@@ -1,18 +1,18 @@
-'use strict';
 (function () {
     angular.module('shopApp')
-        .factory('Catalog',['$http',
-            function ($http) {
-                var catalogFactory = {};
+        .factory('Catalog',['$http',function ($http) {
+            return {
+                list: [],
+                getProducts: function () {
+                    var that = this;
+                    return $http.get('/api/products').success(function (data) {
+                        that.list = data;
+                    });
+                },
 
-                catalogFactory.allProducts = function () {
-                    return $http.get('/api/products');
-                };
-
-                catalogFactory.getProduct = function (productId) {
+                getProduct: function (productId) {
                     return $http.get('/api/products/' + productId);
-                };
-
-                return catalogFactory;
+                }
+            };
         }]);
 }());

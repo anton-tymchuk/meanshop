@@ -1,7 +1,7 @@
 <div class="product__size">
     <div class="product__size__grid">
         <div class="product__size__grid__title">Выберите размер</div>
-        <span class="product__size__select" ng-class="{'product__size__select--selected':selected == $index}" ng-click="selectSize($index)" ng-repeat="size in product.details.sizes">  {{size}} </span>
+        <span class="product__size__select" ng-class="{'product__size__select--selected':selected == $index}" ng-click="selectSize($index)" ng-repeat="size in product.item.details.sizes">  {{size}} </span>
     </div>
 </div>
 

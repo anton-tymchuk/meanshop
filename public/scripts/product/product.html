@@ -7,23 +7,23 @@
             <div class="product__anotation__content">
 
                 <div class="product__id">
-                    id: {{product.sku}}
+                    id: {{product.item.sku}}
                 </div>
 
-                <h1>{{product.title}} <a href="#"> {{product.brand}} </a></span></h1>
+                <h1>{{product.item.title}} <a href="#"> {{product.item.brand}} </a></span></h1>
 
                 <div class="product__price">
-                    {{product.pricing.price}} <span>грн</span>
+                    {{product.item.pricing.price}} <span>грн</span>
                 </div>
 
                 <div class="product__description">
-                    {{product.description}}
+                    {{product.item.description}}
 
                     <div class="product__more_info">
                         <div class="product__features">
                             <ul>
-                                <li ng-repeat="structure in product.details.structure"><b>Состав:</b> {{structure}}</li>
-                                <li><b>Цвет:</b> {{product.details.color}}</li>
+                                <li ng-repeat="structure in product.item.details.structure"><b>Состав:</b> {{structure}}</li>
+                                <li><b>Цвет:</b> {{product.item.details.color}}</li>
                             </ul>
                         </div>
                     </div>

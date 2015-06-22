@@ -18,7 +18,7 @@
         </div>
         <ul class="catalog__products">
 
-            <li class="catalog__products__item" ng-repeat="product in products | filter:brandFilter">
+            <li class="catalog__products__item" ng-repeat="product in products.list | filter:brandFilter">
                 <div class="catalog__image" ng-repeat="image in product.images | limitTo:1">
                     <a href="/catalog/{{product.sku}}"><img alt="" ng-src="{{image}}" width="100%" /></a>
                 </div>

@@ -1,4 +1,3 @@
-'use strict';
 (function(){
     angular.module('shopApp')
         .controller('categoriesCtrl', ['$rootScope', '$scope', '$routeParams', 'Category', function ($rootScope, $scope, $routeParams, Category) {

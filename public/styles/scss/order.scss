@@ -1,0 +1,108 @@
+@import "common.scss";
+
+.order{
+
+    h1{
+        text-transform: uppercase;
+        font-size: 1.25em;
+        color: lighten($black, 20%);
+        font-weight: normal;
+    }
+
+    h3{
+        font-size: 1em;
+        text-transform: uppercase;
+    }
+
+    &__info{
+        padding: 25px;
+        border: 2px solid #ccc;
+        background: #f8f8f8;
+
+        label{
+            text-transform: uppercase;
+            font-size: 0.8125em;
+            margin-bottom: 10px;
+            color: lighten($black, 20%);
+        }
+
+        input[type="text"],input[type="email"], select{
+            height: 40px;
+            border-radius: 5px;
+            border:1px solid #ccc;
+            padding: 10px 10px;
+            margin-bottom: 25px;
+        }
+
+        textarea{
+            border:1px solid #ccc;
+            padding: 10px 10px;
+        }
+    };
+
+    &__purchased__list{
+        float:left;
+        width:75%;
+
+        table{
+            width: 100%;
+        }
+
+        th{
+            padding: 15px;
+            border: 1px solid #efefef;
+            text-transform: uppercase;
+            font-size: 0.875em;
+            color: lighten($black, 20%);
+        }
+
+        td{
+            padding: 15px;
+            border: 1px solid  #efefef;
+            vertical-align: top;
+        }
+    }
+
+    &__purchased{
+        &__image{
+            position: relative;
+            display: inline-block;
+        }
+
+        &__details{
+            position: relative;
+            display: inline-block;
+            left:15px;
+            vertical-align: top;
+        }
+    }
+
+
+    &__customer__info{
+        width: 22%;
+        float: right;
+        border: 2px solid gray;
+        margin-top: 45px;
+
+        table{
+            width: 100%;
+        }
+
+        th{
+            padding: 15px;
+            border: 1px solid #efefef;
+            text-transform: uppercase;
+            font-size: 0.875em;
+            color: lighten($black, 20%);
+        }
+
+        td{
+            padding: 10px  0 10px 15px;
+            font-size: 0.875em;
+            border-bottom: 1px solid #efefef;
+        }
+
+    }
+
+
+}

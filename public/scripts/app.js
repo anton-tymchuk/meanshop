@@ -1,6 +1,7 @@
 'use strict';
 (function () {
     var app = angular.module('shopApp', ['ngRoute']);
+
     angular.module('shopApp')
         .config(function ($routeProvider, $locationProvider) {
             $routeProvider
@@ -20,12 +21,19 @@
                     templateUrl: '../scripts/cart/cart.html',
                     controller: 'cartCtrl'
                 })
+                .when('/order', {
+                    templateUrl: '../scripts/order/order.html',
+                    controller: 'orderCtrl'
+                })
+                .when('/order/:urlHash', {
+                    templateUrl: '../scripts/order/order-success.html',
+                    controller: 'singleOrderCtrl'
+                })
                 .when('/:catName', {
                     templateUrl: '../views/catalog-cat.html',
                     controller: 'categoriesCtrl'
                 })
-
-                .otherwise({redirectTo: "/"});
+                .otherwise({redirectTo: '/'});
 
             $locationProvider.html5Mode(true);
         });

@@ -1,4 +1,3 @@
-'use strict';
 (function () {
     angular.module('shopApp')
         .directive('addToCart', function () {

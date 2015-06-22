@@ -21,7 +21,7 @@ var OrderSchema = new Schema({
             cost: Number
         },
         payment: {
-            deliveryType: String,
+            method: String,
             isPaid: Boolean
         },
         coupon: String,
@@ -29,8 +29,12 @@ var OrderSchema = new Schema({
         urlHash: String
     },
     products: [{
-        name: String,
-        price: Number
+        title: String,
+        price: Number,
+        brand: String,
+        color: String,
+        size: String,
+        image: String
     }]
 });
 
