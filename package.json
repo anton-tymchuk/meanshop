@@ -17,9 +17,14 @@
   },
   "dependencies": {
     "body-parser": "^1.12.4",
+    "bower": "^1.4.1",
     "del": "^1.2.0",
     "express": "^4.12.4",
     "mongoose": "^4.0.5",
     "morgan": "^1.5.3"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "bower install"
   }
 }
