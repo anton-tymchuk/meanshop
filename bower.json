@@ -2,8 +2,11 @@
   "name": "simpla",
   "private": true,
   "dependencies": {
-    "angular": "1.4.0",
+    "angular": "~1.4.1",
     "angular-route": "~1.4.0",
-    "angular-resource": "~1.4.0"
+    "bootstrap": "~3.3.5"
+  },
+  "resolutions": {
+    "angular": "~1.4.x"
   }
 }
