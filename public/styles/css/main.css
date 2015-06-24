@@ -86,9 +86,12 @@ ul {
   }
 }
 .header__mobile__menu {
-  top: 15px;
+  top: 10px;
   position: absolute;
   left: 15px;
+}
+.header__mobile__menu a {
+  font-size: 24px;
 }
 .header__logo--static {
   margin-top: 6px;
@@ -208,6 +211,39 @@ ul {
 
 .fixed-header-fix {
   padding-top: 127px;
+}
+
+.side__menu {
+  background: #fafafa;
+  border-right: 3px solid #ccc;
+  overflow: hidden;
+  height: 0px;
+  width: 250px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+}
+
+.body-moving {
+  position: relative;
+  left: 250px;
+  overflow-x: hidden;
+}
+
+.slideable a {
+  padding: 15px;
+  display: block;
+}
+.slideable__title {
+  text-transform: uppercase;
+  padding-left: 15px;
+  margin-top: 25px;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+.slideable li {
+  border-bottom: 1px solid #efefef;
 }
 
 .btn {

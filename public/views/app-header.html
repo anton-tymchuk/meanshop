@@ -1,11 +1,18 @@
+<div id="derp" class="slideable">
+    <div class="slideable__title">
+        Каталог
+    </div>
+    <cat-list></cat-list>
+</div>
 <div class="header--static header" scroll ng-class="{'header-static':bigHeader,'header--fixed':!bigHeader,}">
   <div class="container-fluid">
 
     <div class="col-xs-2 col-sm-2 visible-sm visible-xs">
         <div class="header__mobile__menu">
-            <a href="#"><span class="glyphicon glyphicon-home"></span></a>
+            <a href="#" slide-toggle="#derp"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
         </div>
     </div>
+
     <div class="col-xs-8 col-sm-8 col-md-3 col-lg-2">
         <div class="header__logo--static">
             <a href="/"><img src="../images/logo.png" alt=""></a>

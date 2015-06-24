@@ -1,6 +1,6 @@
 'use strict';
 (function () {
-    var app = angular.module('shopApp', ['ngRoute']);
+    var app = angular.module('shopApp', ['ngRoute', 'pageslide-directive']);
 
     angular.module('shopApp')
         .config(function ($routeProvider, $locationProvider) {
