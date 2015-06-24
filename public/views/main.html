@@ -4,7 +4,7 @@
      <div class="promo__offer promo__offer__2-3">
          <img src="http://blob2.trendsbrands.ru/v20150409/images/e73/banner_main_tblim_june_01.jpg" alt="" width="100%" />
      </div>
-     <div class="promo__offer promo__offer__1-3">
+     <div class="promo__offer promo__offer__1-3 hidden-sm hidden-xs">
      <img src="http://blob2.trendsbrands.ru/v20150409/images/3af/main_look_base_notext.jpg" alt="" width="100%" /></div>
    </div>
 
@@ -17,7 +17,7 @@
         <img src="http://blob1.trendsbrands.ru/v20150409/images/f8b/main_summer.jpg" alt="" width="100%">
         <a href="">На выпускной</a>
       </div>
-      <div class="promo__offer promo__offer__3">
+      <div class="promo__offer promo__offer__3 hidden-sm hidden-xs">
         <img src="http://blob1.trendsbrands.ru/v20150409/images/fc0/item_0306_d.jpg" alt="" width="100%">
       </div>
     </div>
@@ -31,7 +31,7 @@
         </div>
         <ul class="catalog__products">
 
-            <li class="catalog__products__item" ng-repeat="product in products | limitTo:8">
+            <li class="catalog__products__item" ng-repeat="product in products.list | limitTo:8">
                 <div class="catalog__image" ng-repeat="image in product.images | limitTo:1">
                     <a href="/catalog/{{product.sku}}"><img alt="" ng-src="{{image}}" width="100%" /></a>
                 </div>

@@ -1,3 +1,4 @@
+@import "common.scss";
 
 .promo{
     width: 100%;
@@ -5,6 +6,9 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin-bottom: 15px;
+    @include respond-to(max-width,480px){
+        margin-bottom: 10px;
+    }
 
 
     &__offer{
@@ -32,6 +36,12 @@
             font-weight: bold;
             z-index: 12;
 
+            @include respond-to(max-width,480px){
+                font-size: 1.5em;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
             &:hover{
                 background-color: rgba(54, 25, 25, .5);
                 transition: all 0.5s ease;
@@ -42,6 +52,10 @@
     &__offer__2-3{
         width: 66.3%;
         margin-right: -0.25em;
+
+        @include respond-to(max-width,480px){
+            width: 100%;
+        }
     }
 
     &__offer__1-3{
@@ -55,6 +69,11 @@
         width: 32.53%;
         margin-right: -0.25em;
         margin-left: 1.2%;
+
+        @include respond-to(max-width,480px){
+            width: 49%;
+            margin-left: 2%;
+        }
 
         &:first-child{
             margin-left: 0;

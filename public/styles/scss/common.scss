@@ -32,3 +32,19 @@ $secondary-color: lighten($black, 30%);
         padding: 15px 20px;
     }
 }
+
+@mixin respond-to ($val, $query) {
+    @media ($val: $query) {
+        @content
+    }
+}
+
+@include respond-to(max-width,480px){
+    .container-fluid{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .header--hidden{
+        display: none;
+    }
+}

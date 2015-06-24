@@ -17,7 +17,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('clean', function(cb) {
-    del(['public/styles/css'], cb)
+    del(['public/styles/css'], cb);
 });
 
 gulp.task('default', ['clean'], function() {

@@ -12,12 +12,22 @@
     &__left{
         width:75%;
         float:left;
+
+        @include respond-to(max-width,480px) {
+            width: 100%;
+        }
     }
 
     &__right{
         float: right;
         width: 22%;
         border: 2px solid gray;
+
+        @include respond-to(max-width,480px) {
+            width: 100%;
+            margin-top: 25px;
+            // border: none;
+        }
     }
 
     &__table{
@@ -35,13 +45,13 @@
         td{
             padding: 15px;
             border: 1px solid #efefef;
-            vertical-align: top;
-            position: relative;
+            top:15px;
         }
 
         &__image{
             position: relative;
             display: inline-block;
+
         }
 
         &__title{
@@ -51,12 +61,18 @@
             top:5px;
             color: lighten($black, 50%);
 
+            @include respond-to(max-width,480px) {
+                left: 0;
+            };
+
+
             strong{
                 color:$black;
             }
 
             &__name{
                 text-transform: uppercase;
+
             }
 
             ul{
@@ -80,6 +96,11 @@
             font-weight: bold;
             position: relative;
 
+            @include respond-to(max-width,480px) {
+                left: 0;
+                top: -15px;
+            };
+
             span{
                 font-size: 1em;
             }
@@ -97,11 +118,16 @@
             position: relative;
             font-size: 14px;
 
+            @include respond-to(max-width,480px) {
+                left: 0;
+                width: 100px;
+            };
+
             span{
                 position: relative;
                 top:2px;
                 padding: 5px 5px;
-                font-size: 13px;
+                font-size: 0.8125em;
                 border: 1px solid #ccc;
                 border-radius: 50%;
             }
@@ -132,6 +158,11 @@
             border-bottom: 1px solid #ebebeb;
             padding: 15px;
 
+            @include respond-to(max-width,480px) {
+                float: left;
+                margin-bottom: 15px;
+            };
+
             label{
                 font-weight: normal;
                 font-size: 0.875em;
@@ -143,6 +174,11 @@
                 border-radius: 5px;
                 border:1px solid #ebebeb;
                 padding-left:10px;
+
+                @include respond-to(max-width,480px) {
+                    width: 70%;
+                    float: left;
+                };
             }
 
             input[type="button"]{
@@ -150,6 +186,13 @@
                 border-width: 2px;
                 margin-top:-3px;
                 background-color: #fff;
+
+                @include respond-to(max-width,480px) {
+                    float: left;
+                    margin-top: 0;
+                    margin-left: 10px;
+                    width: 20%;
+                };
             }
         }
 

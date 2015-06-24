@@ -14,6 +14,10 @@
         text-transform: uppercase;
         margin-bottom: 15px;
         font-family: $custom-font;
+
+        @include respond-to(max-width,480px){
+            text-align: center;
+        }
     }
 
     &__image{
@@ -32,6 +36,11 @@
             margin-right: -0.25em;
             vertical-align: top;
             margin-bottom: 25px;
+
+            @include respond-to(max-width,480px){
+                width: 100%;
+                margin-left: 0;
+            }
 
             &:first-child{
                 margin-left: 0;

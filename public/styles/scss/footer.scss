@@ -8,6 +8,15 @@ $black: #000;
     margin-bottom:45px;
     float:left;
     width:100%;
+    border-top: 1px solid #e5e5e5;
+
+    @include respond-to(max-width,480px) {
+        padding:15px 0;
+        margin-bottom: 0;
+        border-top: none;
+        // background: #efefef;
+        margin-top:0;
+    }
 
     ul{
         padding: 0;

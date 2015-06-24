@@ -14,7 +14,7 @@
                 </tr>
                 <tr ng-repeat="item in cartProducts">
                     <td>
-                        <div class="cart__table__image">
+                        <div class="cart__table__image hidden-xs hidden-sm">
                             <img ng-src="{{item.image}}" alt="" width="80px;"/>
                         </div>
 
@@ -38,7 +38,7 @@
                         <div class="cart__table__remove">
                             <a href="#"ng-click="removeFromCart($index)">
                                 <span class="glyphicon glyphicon-remove"></span>
-                                удалить из корзины
+                                удалить
                             </a>
                         </div>
                     </td>
@@ -65,7 +65,7 @@
                         </ul>
                     </div>
                     <div class="cart__summary__sum">
-                        <span>Итого:</span>
+                        <span class="hidden-sm hidden-xs">Итого:</span>
                         <strong>{{priceSum}}</strong> <i>грн</i>
                     </div>
                     <div class="cart__summary__confirm">

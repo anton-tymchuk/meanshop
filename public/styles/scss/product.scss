@@ -1,5 +1,9 @@
 @import "common.scss";
 
+.dbug{
+    border:1px solid #000;
+}
+
 .product{
 
     // Images
@@ -7,6 +11,11 @@
         position: relative;
         float: left;
         width: 55%;
+
+        @include respond-to(max-width,480px) {
+            width: 100%;
+            float: right;
+        }
     }
 
     &__image__preview{
@@ -15,9 +24,25 @@
         width:100px;
         z-index: 10;
 
+        @include respond-to(max-width,480px) {
+            width:100%;
+            bottom:0;
+            height: 160px;
+            overflow: hidden;
+        }
+
         li{
             margin-bottom: 10px;
             list-style: none;
+
+            @include respond-to(max-width,480px) {
+                display: inline-block;
+                margin-right: 10px;
+
+                &:last-child{
+                    margin: 0
+                }
+            }
         }
     }
 
@@ -27,6 +52,15 @@
         top:0;
         width: auto;
         z-index: 5;
+
+        @include respond-to(max-width,480px) {
+            margin-bottom: 170px;
+            margin-left: 0;
+            // padding-right: 10px;
+            margin-top: 150px;
+            width:100%;
+        }
+
 
         img{
             width: 100%;
@@ -40,9 +74,19 @@
         padding-left: 15px;
         padding-top: 45px;
 
+        @include respond-to(max-width,480px) {
+            width: 100%;
+            float: left;
+            padding-left: 0;
+        }
+
         &__content{
             width:450px;
             margin: 0 auto;
+
+            @include respond-to(max-width,480px) {
+                width: 100%;
+            }
         }
     }
 
@@ -60,6 +104,11 @@
         color: lighten($black, 60%);
         font-family: $custom-font;
 
+        @include respond-to(max-width,480px) {
+            position: absolute;
+            top:0;
+        }
+
         span{
             color: $black;
         }
@@ -69,6 +118,13 @@
         font-size: 1.25em;
         text-align: center;
         font-family: $custom-font;
+
+        @include respond-to(max-width,480px) {
+            position: absolute;
+            top:100px;
+            text-align: center;
+            width: 95%;
+        }
     }
 
     &__description{
@@ -163,6 +219,10 @@
             display: inline-block;
             padding-right: 10px;
             font-family: $custom-font;
+
+            .btn{
+                width: 100%;
+            }
         }
 
     }
