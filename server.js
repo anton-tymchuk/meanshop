@@ -3,6 +3,7 @@ var express = require('express'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser'),
     config = require('./app/config/config'),
+    multer  = require('multer'),
     morgan = require('morgan');
 
 var db = mongoose.connect(config.DB, function (err) {
@@ -20,7 +21,26 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(morgan('dev'));
 
 app.use(express.static(__dirname + '/public'));
-
+app.use(multer({
+    dest: './public/uploads/',
+    putSingleFilesInArray: true,
+    rename: function (fieldname, filename) {
+        return filename.replace(/\W+/g, '-').toLowerCase() + Date.now();
+    },
+    onFileUploadStart: function (file) {
+        if (file.extension !== 'jpg') {
+            console.log('invalid file');
+            return false;
+        }
+        console.log(file.fieldname + ' is starting ...');
+    },
+    onFileUploadData: function (file, data) {
+        console.log(data.length + ' of ' + file.fieldname + ' arrived');
+    },
+    onFileUploadComplete: function (file) {
+        console.log(file.fieldname + ' uploaded to  ' + file.path);
+    }
+}));
 
 // Product Api
 productRouter = require('./app/routes/ProductRoutes')(Product);

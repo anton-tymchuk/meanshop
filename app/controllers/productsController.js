@@ -1,8 +1,25 @@
+var _ = require('underscore');
 
 var productsController = function (Product) {
 
     // Post new product function
     var post = function (req, res) {
+
+        // Get images path
+        var urlArray = [];
+        console.log(req.files);
+        if(req.files.images === undefined) {
+            urlArray = [];
+        }
+        else if(!Array.isArray(req.files.images)){
+            urlArray.push(req.files.images.path.slice(7));
+        } else{
+            urlArray = _.map(req.files.images, function(num){
+               return num.path.slice(7);
+           });
+        }
+        console.log(urlArray);
+
         var newProduct = new Product({
             sku: req.body.sku,
             title: req.body.title,
@@ -19,7 +36,7 @@ var productsController = function (Product) {
                 color: req.body.color,
                 structure: req.body.structure
             },
-            images: req.body.images
+            images: urlArray
         });
 
         newProduct.save(function (err) {

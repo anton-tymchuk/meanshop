@@ -1,18 +1,14 @@
+var _ = require('underscore');
 var catalogController = function (Product) {
 
     // Create listing (brands or catrgories) array
-    function createList(arr, key){
-        var listing = [];
+    function createList(arr, name){
 
-        for(var i = 0, j = arr.length; i < j; i++){
-            var current = arr[i][key];
+        var arrNew = _.map(arr, function(num){
+            return num[name];
+        });
 
-            if(listing.indexOf(current) < 0){
-                listing.push(current);
-            }
-        }
-
-        return listing;
+        return _.uniq(arrNew);
     }
 
     // Get category and brand listing

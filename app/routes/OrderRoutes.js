@@ -13,9 +13,6 @@ var routes = function (Order) {
             next();
         });
 
-        // Genereate order URL hash
-        // req.orderHash = Math.random().toString(33).substr(2, 30);
-
     });
 
     ordersRouter.route('/new-order')
