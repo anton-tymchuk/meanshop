@@ -7,7 +7,7 @@ var productsController = function (Product) {
 
         // Get images path
         var urlArray = [];
-        console.log(req.files);
+
         if(req.files.images === undefined) {
             urlArray = [];
         }
@@ -18,7 +18,6 @@ var productsController = function (Product) {
                return num.path.slice(7);
            });
         }
-        console.log(urlArray);
 
         var newProduct = new Product({
             sku: req.body.sku,

@@ -21,6 +21,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(morgan('dev'));
 
 app.use(express.static(__dirname + '/public'));
+
+// Images uploading
 app.use(multer({
     dest: './public/uploads/',
     putSingleFilesInArray: true,
@@ -43,15 +45,15 @@ app.use(multer({
 }));
 
 // Product Api
-productRouter = require('./app/routes/ProductRoutes')(Product);
+var productRouter = require('./app/routes/ProductRoutes')(Product);
 app.use('/api/products', productRouter);
 
 // Catalog Api
-catalogRouter = require('./app/routes/CatalogRoutes.js')(Product);
+var catalogRouter = require('./app/routes/CatalogRoutes.js')(Product);
 app.use('/api/catalog', catalogRouter);
 
 // Orders Api
-ordersRouter = require('./app/routes/OrderRoutes')(Order)
+var ordersRouter = require('./app/routes/OrderRoutes')(Order);
 app.use('/api/orders', ordersRouter);
 
 // Front end url
