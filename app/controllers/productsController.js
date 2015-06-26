@@ -8,16 +8,19 @@ var productsController = function (Product) {
         // Get images path
         var urlArray = [];
 
-        if(req.files.images === undefined) {
-            urlArray = [];
+        if(req.images){
+            if(req.files.images === undefined) {
+                urlArray = [];
+            }
+            else if(!Array.isArray(req.files.images)){
+                urlArray.push(req.files.images.path.slice(7));
+            } else{
+                urlArray = _.map(req.files.images, function(num){
+                   return num.path.slice(7);
+               });
+            }
         }
-        else if(!Array.isArray(req.files.images)){
-            urlArray.push(req.files.images.path.slice(7));
-        } else{
-            urlArray = _.map(req.files.images, function(num){
-               return num.path.slice(7);
-           });
-        }
+
 
         var newProduct = new Product({
             sku: req.body.sku,
@@ -46,6 +49,7 @@ var productsController = function (Product) {
                 console.log('New Product has been posted');
             }
 
+            res.status(200);
             res.json({
                 success: true,
                 product: newProduct
@@ -61,6 +65,7 @@ var productsController = function (Product) {
                 return;
             }
             res.json(products);
+            res.status(200);
         });
     };
 
