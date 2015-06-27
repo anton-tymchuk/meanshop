@@ -2,17 +2,13 @@ var express = require('express');
 
 var routes = function (Product) {
     var productRouter = express.Router();
-    var productsController = require('../controllers/productsController.js')(Product);
+    var productsController = require('../controllers/productsController')(Product);
 
     // Add product
     productRouter.route('/addproduct')
         .post(productsController.post);
 
-    // Fetch all products
-    productRouter.route('/')
-        .get(productsController.get);
-
-    // Fetch one product midleware
+    // Fetch one product
     productRouter.use('/:productId', function (req, res, next) {
         Product.findOne({sku: req.params.productId}, function (err, product) {
             if (err) {
@@ -28,6 +24,9 @@ var routes = function (Product) {
 
     productRouter.route('/:productId')
         .get(productsController.getOne);
+
+    productRouter.route('/')
+        .get(productsController.get);
 
     return productRouter;
 };

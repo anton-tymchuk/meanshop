@@ -4,7 +4,8 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     config = require('./app/config/config'),
     multer  = require('multer'),
-    morgan = require('morgan');
+    morgan = require('morgan'),
+    jwt = require('jsonwebtoken');
 
 var db = mongoose.connect(config.DB, function (err) {
         if(err) {
@@ -14,7 +15,8 @@ var db = mongoose.connect(config.DB, function (err) {
 });
 
 var Product = require('./app/models/Product'),
-    Order = require('./app/models/Orders');
+    Order = require('./app/models/Orders'),
+    User = require('./app/models/User');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -56,11 +58,14 @@ app.use('/api/catalog', catalogRouter);
 var ordersRouter = require('./app/routes/OrderRoutes')(Order);
 app.use('/api/orders', ordersRouter);
 
+// User Api
+var userRouter = require('./app/routes/UserRouters')(User);
+app.use('/api/user', userRouter);
+
 // Front end url
 app.get('*', function (req, res) {
     res.sendFile(__dirname + '/public/index.html');
 });
-
 
 app.listen(config.PORT, function () {
     console.log('App is running on port: ' + config.PORT);

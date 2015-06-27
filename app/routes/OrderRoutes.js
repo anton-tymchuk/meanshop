@@ -6,7 +6,6 @@ var routes = function (Order) {
 
     // Add new Order
     ordersRouter.use('/new-order', function (req, res, next) {
-
         // Geterate order id
         Order.count({}, function(err, count){
             req.count = count;
@@ -17,12 +16,6 @@ var routes = function (Order) {
 
     ordersRouter.route('/new-order')
         .post(orderController.post);
-
-
-    // Fetch all orders
-    ordersRouter.route('/')
-        .get(orderController.get);
-
 
     // Fetch single order
     ordersRouter.use('/:orderHash', function (req, res, next) {
@@ -40,6 +33,9 @@ var routes = function (Order) {
 
     ordersRouter.route('/:orderHash')
         .get(orderController.getOne);
+
+    ordersRouter.route('/')
+        .get(orderController.get);
 
     return ordersRouter;
 };
