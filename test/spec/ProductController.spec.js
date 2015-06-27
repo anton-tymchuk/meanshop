@@ -23,16 +23,5 @@ describe('ProductController', function () {
                 productController.get(req, res);
             });
         });
-
-        describe('Post Product', function () {
-            var product = new Product();
-
-            it('Product have been saved', function () {
-                var spy = spyOn(product, 'save');
-                product.save();
-                expect(spy).toHaveBeenCalled();
-                productController.post(req, res);
-            });
-        });
     });
 });
