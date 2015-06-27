@@ -3,6 +3,7 @@ var express = require('express');
 var routes = function (Order) {
     var ordersRouter = express.Router();
     var orderController = require('../controllers/orderController.js')(Order);
+    var token = require('../controllers/tokenController')();
 
     // Add new Order
     ordersRouter.use('/new-order', function (req, res, next) {
@@ -33,6 +34,10 @@ var routes = function (Order) {
 
     ordersRouter.route('/:orderHash')
         .get(orderController.getOne);
+
+    ordersRouter.use('/', function (req, res, next) {
+        token.verifyToken(req, res, next);
+    });
 
     ordersRouter.route('/')
         .get(orderController.get);

@@ -3,12 +3,18 @@ var express = require('express');
 var routes = function (Product) {
     var productRouter = express.Router();
     var productsController = require('../controllers/productsController')(Product);
+    var token = require('../controllers/tokenController')();
 
     // Add product
+    productRouter.use('/addproduct', function (req, res, next) {
+        token.verifyToken(req, res, next);
+    });
+
     productRouter.route('/addproduct')
         .post(productsController.post);
 
-    // Fetch one product
+
+    // Fetch product
     productRouter.use('/:productId', function (req, res, next) {
         Product.findOne({sku: req.params.productId}, function (err, product) {
             if (err) {

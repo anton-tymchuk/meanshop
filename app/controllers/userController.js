@@ -1,9 +1,3 @@
-jwt = require('jsonwebtoken');
-
-function createToken(user) {
-    var token = jwt.sign(user, 'secretKey', {expiresInMinutes: 1440});
-    return token;
-}
 
 function sendResponse(resObj, success, message){
     return resObj.json({
@@ -54,6 +48,7 @@ var userController = function (User) {
             if(!user){
                 sendResponse(res, false, 'User does\'not exist!');
             } else if(user){
+                var token = require('../controllers/tokenController')(user);
 
                 // Check password
                 if(user.password !== req.body.password){
@@ -62,7 +57,7 @@ var userController = function (User) {
                     res.json({
                         success: true,
                         message: 'Enjoy your token!',
-                        token: createToken(user)
+                        token: token.createToken(user)
                     });
                 }
             }
