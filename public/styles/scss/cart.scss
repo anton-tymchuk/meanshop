@@ -308,3 +308,54 @@
         display: none;
     }
 }
+
+.favorite__informer{
+    position: absolute;
+    right: 60px;
+    padding: 17px;
+    padding-top: 23px;
+    padding-bottom: 14px;
+    top: -11px;
+
+    &:hover{
+        background: #efefef;
+    }
+
+    &__counter{
+        color:#fff;
+        font-size: 12px;
+        padding: 2px 7px;
+        border-radius: 100%;
+        background-color: orange;
+        position: absolute;
+        border: 2px solid #fff;
+        top:13px;
+        right:0px;
+    }
+}
+
+.cart__informer{
+    position: absolute;
+    padding: 17px;
+    padding-top: 24px;
+    padding-bottom: 14px;
+    right: 0;
+    top:-11px;
+    font-size: $base-font;
+
+    &:hover{
+        background: #efefef;
+    }
+
+    &__counter{
+        color:#fff;
+        font-size: 12px;
+        padding: 2px 7px;
+        border-radius: 100%;
+        background-color: orange;
+        position: absolute;
+        border: 2px solid #fff;
+        top:13px;
+        right:0px;
+    }
+}

@@ -8,7 +8,7 @@ var productsController = function (Product) {
         // Get images path
         var urlArray = [];
 
-        if(req.images){
+        if(req.files){
             if(req.files.images === undefined) {
                 urlArray = [];
             }
@@ -21,6 +21,7 @@ var productsController = function (Product) {
             }
         }
 
+        console.log(req.files);
 
         var newProduct = new Product({
             sku: req.body.sku,
@@ -38,7 +39,10 @@ var productsController = function (Product) {
                 color: req.body.color,
                 structure: req.body.structure
             },
-            images: urlArray
+            images: urlArray,
+            seo: {
+                title: req.body.seoTitle
+            }
         });
 
         newProduct.save(function (err) {

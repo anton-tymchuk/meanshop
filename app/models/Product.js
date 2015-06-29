@@ -23,6 +23,11 @@ var ProductSchema = new Schema({
     },
 
     images: [String],
+    seo: {
+        title: String,
+        meta: String,
+        keywords: String
+    }
 
 });
 

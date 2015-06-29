@@ -63,26 +63,6 @@ ul{
         top: 30px;
     }
 
-    &__cart{
-        position: absolute;
-        top: 60px;
-        right:0;
-        font-size: $base-font;
-        padding-left: 20px;
-        padding-right: 15px;
-
-        .glyphicon-shopping-cart{
-            position: absolute;
-            left:0;
-            top:5px;
-        }
-
-        @include respond-to(max-width,480px) {
-            position: absolute;
-            right:0;
-            top:15px;
-        };
-    }
 }
 
 .header--static{
@@ -161,10 +141,6 @@ ul{
             top:16px;
         }
 
-        &__cart{
-            top:16px;
-
-        }
     }
 }
 .fixed-header-fix{

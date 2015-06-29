@@ -4,8 +4,7 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     config = require('./app/config/config'),
     multer  = require('multer'),
-    morgan = require('morgan'),
-    jwt = require('jsonwebtoken');
+    morgan = require('morgan');
 
 var db = mongoose.connect(config.DB, function (err) {
         if(err) {
@@ -32,10 +31,10 @@ app.use(multer({
         return filename.replace(/\W+/g, '-').toLowerCase() + Date.now();
     },
     onFileUploadStart: function (file) {
-        if (file.extension !== 'jpg') {
-            console.log('invalid file');
-            return false;
-        }
+        // if (file.extension !== 'jpg') {
+        //     console.log('invalid file');
+        //     return false;
+        // }
         console.log(file.fieldname + ' is starting ...');
     },
     onFileUploadData: function (file, data) {

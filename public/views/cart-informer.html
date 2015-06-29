@@ -1,8 +1,22 @@
-<div class="header__cart">
+
+<span class="favorite__informer">
+
+    <span class="favorite__informer__icon">
+        <img src="../images/fav_icon_24.png">
+        <!-- <span class="favorite__informer__counter" ng-if="cartLenght > 0"></span> -->
+    </span>
+
+</span>
+
+<div class="cart__informer">
     <a href="/cart">
-  <span class="glyphicon glyphicon-shopping-cart"></span>
-  <span class="hidden-xs hidden-sm">
-      <span class="header--hidden" ng-show="bigHeader">Корзинa: </span> <span>{{priceSum}}</span>  грн.
-  </span>
+
+    <span class="cart__informer__icon">
+        <img src="../images/cart_icon_24.png">
+    </span>
+
+    <span class="cart__informer__counter" ng-if="cartLenght > 0">
+        {{cartLenght}}
+    </span>
   </a>
 </div>

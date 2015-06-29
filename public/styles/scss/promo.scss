@@ -52,6 +52,13 @@
     &__offer__2-3{
         width: 66.3%;
         margin-right: -0.25em;
+        max-height: 480px;
+        vertical-align: top;
+        overflow: hidden;
+
+        img{
+            vertical-align: top;
+        }
 
         @include respond-to(max-width,480px){
             width: 100%;
