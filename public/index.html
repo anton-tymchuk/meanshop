@@ -25,61 +25,10 @@
     <app-header></app-header>
 
     <div class="container-fluid">
-
-    <div class="" ng-view autoscroll="true"></div>
-
-    <div class="footer">
-        © Hipsta Brands - лучшие вещи для хипстеров!
-    </div>
-          <!--
-            <div class="col-md-3 hidden-xs hidden-sm">
-                  <div class="footer__header">
-                      О магазине
-                  </div>
-                  <ul>
-                      <li><a href="">О проекте</li></a>
-                      <li><a href="">T&B Limited</li></a>
-                      <li><a href="">Наши магазины</li></a>
-                      <li><a href="">T&B Club</li></a>
-                  </ul>
-            </div>
-
-            <div class="col-md-2 hidden-xs hidden-sm">
-                  <div class="footer__header">
-                      Помощь
-                  </div>
-                  <ul>
-                      <li><a href="">Контакты</li></a>
-                      <li><a href="">Оплата</li></a>
-                      <li><a href="">Доставка</li></a>
-                      <li><a href="">Гарантия и возврат</li></a>
-                  </ul>
-            </div>
-            <div class="col-xs-6 col-md-4">
-                  <div class="footer__header hidden-xs hidden-sm">
-                      Мы в социальных сетях
-                  </div>
-                  <span class="social social-facebook"></span>
-                  <span class="social social-facebook"></span>
-                  <span class="social social-facebook"></span>
-                  <span class="social social-facebook hidden-xs hidden-sm"></span>
-
-            </div>
-            <div class="col-xs-6 col-md-3">
-                  <div class="footer__header hidden-xs hidden-sm">
-                      Способы оплаты
-                  </div>
-                  <span><img src="http://www.trendsbrands.ru/bitrix/templates/new2014/assets/img/graphics/payment-mastercard.gif" alt="" /></span>
-                  <span><img src="http://www.trendsbrands.ru/bitrix/templates/new2014/assets/img/graphics/payment-visa.gif" alt="" /></span>
-                  <span><img src="http://www.trendsbrands.ru/bitrix/templates/new2014/assets/img/graphics/cash_icon.png" alt="" /></span>
-
-            </div>
-        -->
+        <div class="" ng-view autoscroll="true"></div>
+        <div class="footer">
+            © Hipsta Brands - лучшие вещи для хипстеров!
         </div>
-
-
-
-
     </div>
 
 
@@ -93,38 +42,37 @@
 
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/app.js"></script>
+        <script src="app.js"></script>
 
         <!-- Services -->
-        <script src="scripts/services/productsService.js" charset="utf-8"></script>
-        <script src="scripts/services/categoryService.js" charset="utf-8"></script>
+        <script src="services/productsService.js" charset="utf-8"></script>
+        <script src="services/categoryService.js" charset="utf-8"></script>
+        <script src="services/productService.js" charset="utf-8"></script>
+        <script src="services/purchaseService.js" charset="utf-8"></script>
 
         <!--  Product -->
-        <script src="scripts/product/product-images.js" charset="utf-8"></script>
-        <script src="scripts/product/productCtrl.js" charset="utf-8"></script>
-        <script src="scripts/services/productService.js" charset="utf-8"></script>
+        <script src="product-page/product-gallery/product-images.js" charset="utf-8"></script>
+        <script src="product-page/productCtrl.js" charset="utf-8"></script>
 
         <!-- Cart -->
         <script src="cart/cartCtrl.js" charset="utf-8"></script>
-        <script src="cart//add-to-cart/add-to-cart.js" charset="utf-8"></script>
-        <script src="cart/cart-informer.js" charset="utf-8"></script>
-        <script src="cart/add-to-cart-modal.js" charset="utf-8"></script>
-        <script src="scripts/services/purchaseService.js" charset="utf-8"></script>
+        <script src="cart/add-to-cart/add-to-cart.js" charset="utf-8"></script>
+        <script src="cart/cart-informer/cart-informer.js" charset="utf-8"></script>
+        <script src="cart/cart-modal/add-to-cart-modal.js" charset="utf-8"></script>
 
         <!--  Product lists -->
-        <script src="scripts/products-list/categoriesCtrl.js" charset="utf-8"></script>
-        <script src="scripts/products-list/productsCtrl.js" charset="utf-8"></script>
-        <script src="scripts/products-list/cat-list.js" charset="utf-8"></script>
-        <script src="scripts/products-list/brand-list.js" charset="utf-8"></script>
+        <script src="products-list/categoriesCtrl.js" charset="utf-8"></script>
+        <script src="products-list/productsCtrl.js" charset="utf-8"></script>
+        <script src="products-list/categories/cat-list.js" charset="utf-8"></script>
+        <script src="products-list/brands/brand-list.js" charset="utf-8"></script>
 
         <!-- Orders -->
-        <script src="scripts/order/orderCtrl.js" charset="utf-8"></script>
-        <script src="scripts/order/singleOrderCtrl.js" charset="utf-8"></script>
-
+        <script src="order/orderCtrl.js" charset="utf-8"></script>
+        <script src="order/singleOrderCtrl.js" charset="utf-8"></script>
 
         <!-- Shared -->
-        <script src="scripts/shared/app-header.js" charset="utf-8"></script>
-        <script src="scripts/shared/side-menu.js" charset="utf-8"></script>
+        <script src="common/header/app-header.js" charset="utf-8"></script>
+        <script src="common/side-menu/side-menu.js" charset="utf-8"></script>
 
         <!-- endbuild -->
 

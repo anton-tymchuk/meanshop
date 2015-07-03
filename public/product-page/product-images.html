@@ -1,0 +1,14 @@
+<div class="product__image">
+    <div class="product__image__preview">
+        <ul>
+            <li ng-repeat="image in product.images">
+                <a href="" ng-click="setBigImage(image)">
+                    <img ng-src="{{image}}" width="100px;"/>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="product__main__image">
+        <img ng-src="{{bigImage}}" alt="" />
+    </div>
+</div>

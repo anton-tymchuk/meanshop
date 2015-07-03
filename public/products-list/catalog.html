@@ -1,0 +1,45 @@
+<div class="col-md-2">
+    <div class="sidebar hidden-xs hidden-sm">
+
+        <div class="sidebar__header">
+            Каталог
+        </div>
+        <cat-list></cat-list>
+
+        <div class="sidebar__header">
+            Каталог
+        </div>
+        <brand-list></brand-list>
+
+    </div>
+
+</div>
+<div class="col-md-10">
+    <div class="catalog margin-top-35">
+        <div class="catalog__title">
+            Каталог
+        </div>
+        <ul class="catalog__products">
+
+            <li class="catalog__products__item" ng-repeat="product in products.list | filter:brandFilter">
+                <div class="catalog__image" ng-repeat="image in product.images | limitTo:1">
+                    <a href="/catalog/{{product.sku}}"><img alt="" ng-src="{{image}}" width="100%" /></a>
+                </div>
+
+                <div class="catalog__products__item_annotation">
+
+                    <div class="catalog__name">
+                        <a href="/catalog/{{product.sku}}">{{product.title}} {{product.brand}}</a>
+                    </div>
+
+                    <div class="catalog__price">
+                        <span class="catalog__price">
+                            {{product.pricing.price}} грн
+                        </span>
+                        <span class="catalog__price--old" ng-show="product.pricing.oldPrice">{{product.pricing.oldPrice}} грн</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

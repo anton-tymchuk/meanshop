@@ -1,0 +1,56 @@
+<div class="col-md-12">
+    <div class="product">
+
+        <product-images></product-images>
+
+        <div class="product__anotation">
+            <div class="product__anotation__content">
+
+                <div class="product__id">
+                    id: {{product.item.sku}}
+                </div>
+
+                <h1>{{product.item.title}} <a href="#"> {{product.item.brand}} </a></span></h1>
+
+                <div class="product__price">
+                    {{product.item.pricing.price}} <span>грн</span>
+                </div>
+
+                <div class="product__description">
+                    {{product.item.description}}
+
+                    <div class="product__more_info">
+                        <div class="product__features">
+                            <ul>
+                                <li ng-repeat="structure in product.item.details.structure"><b>Состав:</b> {{structure}}</li>
+                                <li><b>Цвет:</b> {{product.item.details.color}}</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <add-to-cart></add-to-cart>
+
+                <div class="additional__info hidden-xs hidden-sm">
+                    <div class="additional__info__delivery">
+                        <div class="additional__info__delivery__icon"></div>
+                        Бесплатная доставка по Украине
+                    </div>
+                    <div class="additional__info__try">
+                        <div class="additional__info__try__icon"></div>
+                        Привезем 2 размера на примерку
+                    </div>
+                    <div class="additional__info__return">
+                        <div class="additional__info__return__icon"></div>
+                        Обмен в течение 14 дней
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <add-to-cart-modal></add-to-cart-modal>
+</div>

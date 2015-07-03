@@ -1,0 +1,19 @@
+
+<span class="favorite__informer">
+    <span class="favorite__informer__icon">
+        <img src="../assets/images/fav_icon_24.png">
+        <!-- <span class="favorite__informer__counter" ng-if="cartLenght > 0"></span> -->
+    </span>
+</span>
+
+<div class="cart__informer">
+    <a href="/cart">
+        <span class="cart__informer__icon">
+            <img src="../assets/images/cart_icon_24.png">
+        </span>
+
+        <span class="cart__informer__counter" ng-if="cartLenght > 0">
+            {{cartLenght || 0}}
+        </span>
+  </a>
+</div>

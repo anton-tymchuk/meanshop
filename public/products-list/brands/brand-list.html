@@ -1,0 +1,5 @@
+<ul>
+    <li ng-repeat="brand in brands | orderBy: brand">
+        <a href="#" ng-click="$parent.brandFilter = brand"> {{brand}} </a>
+    </li>
+</ul>

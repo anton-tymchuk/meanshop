@@ -1,0 +1,44 @@
+
+<side-menu></side-menu>
+
+<div class="header--static header" scroll ng-class="{'header-static':bigHeader,'header--fixed':!bigHeader,}">
+  <div class="container-fluid">
+
+    <div class="col-xs-2 col-sm-2 visible-sm visible-xs">
+        <div class="header__mobile__menu">
+            <a href="#" slide-toggle="#slide-menu"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+        </div>
+    </div>
+
+    <div class="col-xs-8 col-sm-8 col-md-3 col-lg-2">
+        <div class="header__logo--static">
+            <a href="/"><img src="../assets/images/logo.png" alt=""></a>
+        </div>
+        <div class="header__logo--fixed" ng-hide="bigHeader">
+            <a href="/"><img src="../assets/images/logo-small.png" alt=""></a>
+        </div>
+    </div>
+
+    <div class="col-xs-10 col-sm-10 col-md-7 col-lg-8 hidden-xs">
+
+      <div class="header__menu">
+        <ul>
+          <li><a href="/catalog">Catalog</a></li>
+          <li><a href="/catalog">Sale</a></li>
+          <li><a href="/catalog">Popular</a></li>
+        </ul>
+      </div>
+
+      <div class="header__phone">
+        <b>+38 066 163-12-22</b> <span class="header__phone__span"> — <span ng-show="bigHeader">прием заказов</span> с 9:00 до 21:00</span>
+      </div>
+
+    </div>
+
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+      <cart-informer informer></cart-informer>
+    </div>
+
+
+  </div>
+</div>

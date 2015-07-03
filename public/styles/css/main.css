@@ -763,7 +763,7 @@ ul {
   padding-right: 2%;
 }
 .additional__info__delivery__icon {
-  background: url("../../images/icons.png") 0 0 no-repeat;
+  background: url("../../assets/images/icons.png") 0 0 no-repeat;
   width: 42px;
   height: 18px;
   margin-bottom: 12px;
@@ -774,7 +774,7 @@ ul {
   float: left;
 }
 .additional__info__try__icon {
-  background: url("../../images/icons.png") 0 -18px no-repeat;
+  background: url("../../assets/images/icons.png") 0 -18px no-repeat;
   width: 42px;
   height: 20px;
   margin-bottom: 10px;
@@ -784,7 +784,7 @@ ul {
   float: left;
 }
 .additional__info__return__icon {
-  background: url("../../images/icons.png") 0 -38px no-repeat;
+  background: url("../../assets/images/icons.png") 0 -38px no-repeat;
   width: 42px;
   height: 22px;
   margin-bottom: 8px;
