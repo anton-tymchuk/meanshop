@@ -1,4 +1,3 @@
-'use strict';
 (function () {
     var app = angular.module('shopApp', ['ngRoute', 'pageslide-directive']);
 
@@ -18,7 +17,7 @@
                     controller: 'productCtrl'
                 })
                 .when('/cart', {
-                    templateUrl: '../scripts/cart/cart.html',
+                    templateUrl: '../cart/cart.html',
                     controller: 'cartCtrl'
                 })
                 .when('/order', {
@@ -33,7 +32,7 @@
                     templateUrl: '../views/catalog-cat.html',
                     controller: 'categoriesCtrl'
                 })
-                .otherwise({redirectTo: '/'});
+                .otherwise({redirectTo: '/404'});
 
             $locationProvider.html5Mode(true);
         });

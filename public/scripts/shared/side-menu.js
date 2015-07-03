@@ -13,6 +13,7 @@ angular.module("pageslide-directive", [])
         }
     };
 })
+
 .directive('slideToggle', function() {
     return {
         restrict: 'A',
