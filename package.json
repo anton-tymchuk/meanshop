@@ -29,6 +29,7 @@
     "mongoose": "^4.0.5",
     "morgan": "^1.5.3",
     "multer": "^0.1.8",
+    "nodemailer": "^1.4.0",
     "underscore": "^1.8.3"
   }
 }

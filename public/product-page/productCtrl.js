@@ -18,6 +18,12 @@
                 $scope.selectedSize = $scope.product.item.details.sizes[index];
             };
 
+            // Create cart product object
+            function addProduct(){
+                PurchaseFactory.addToCart($scope.selectedSize);
+                PurchaseFactory.updateCart();
+            }
+
             // Add to cart
             $scope.addToCart = function(){
                 if($scope.selectedSize === null){
@@ -27,12 +33,6 @@
                     $scope.closed = false;
                 }
             };
-
-            // Create cart product object
-            function addProduct(){
-                PurchaseFactory.addToCart($scope.selectedSize);
-                PurchaseFactory.updateCart();
-            }
 
         }]);
 }());

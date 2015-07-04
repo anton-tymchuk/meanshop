@@ -1,3 +1,4 @@
+var sendMail = require('../controllers/mailerController');
 var orderController = function (Order) {
 
     // Post new order function
@@ -43,6 +44,8 @@ var orderController = function (Order) {
                 success: true,
                 order: order
             });
+
+            sendMail(req);
         });
     };
 

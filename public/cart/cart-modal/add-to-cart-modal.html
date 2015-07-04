@@ -1,10 +1,13 @@
 <div class="cart__modal" ng-class="{'cart__modal--hidden':closed}">
+
     <div class="cart__modal--close">
         <a href="#" ng-click="closeModal()"><span class="glyphicon glyphicon-remove"></span></a>
     </div>
+
     <div class="cart__modal__image">
         <img ng-src="{{product.item.bigImage}}" width="150px" alt="" />
     </div>
+
     <div class="cart__modal__anotation">
         <div class="cart__modal__sku">
             id: <span>{{product.item.sku}}</span>

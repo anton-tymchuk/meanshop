@@ -11,9 +11,8 @@
                     this.product.price = Product.item.pricing.price;
                     this.product.oldPrice = Product.item.pricing.oldPrice || Product.item.pricing.price;
                     this.product.color = Product.item.details.color;
-
-                    console.log(this.product);
                 },
+
                 // Set cart array to localStorage
                 updateCart: function (){
                     var arr;
@@ -33,6 +32,7 @@
                 getCartProducts: function () {
                     this.cartProducts = JSON.parse(localStorage.getItem('cart'));
                 },
+
                 getCartSum: function (key) {
                     var sum = 0;
                     for(var i = 0, j = this.cartProducts.length; i < j; i++){
@@ -41,16 +41,19 @@
                     this.cart.sum = sum;
                     return sum;
                 },
+
                 removeFromCart: function (index) {
                     var arr;
                     arr = JSON.parse(localStorage.getItem('cart'));
                     arr.splice(index, 1);
                     localStorage.setItem('cart', JSON.stringify(arr));
                 },
+
                 // Order
                 createOrder: function (orderData) {
                     $http.post('/api/orders/new-order', orderData);
                 },
+
                 order: {},
                 getOrder: function (orderHash) {
                     var that = this;

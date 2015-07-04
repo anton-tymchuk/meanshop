@@ -5,7 +5,7 @@
             function cartInit() {
 
                 // Get cart products
-                $scope.cartProducts = PurchaseFactory.getCartProducts();
+                PurchaseFactory.getCartProducts();
                 $scope.cartProducts = PurchaseFactory.cartProducts;
 
                 $scope.cartLenght = $scope.cartProducts.length;
@@ -20,9 +20,9 @@
 
             // Remove item from cart
             $scope.removeFromCart = function (index) {
-                    var productIndex = $scope.cartProducts.indexOf($scope.cartProducts[index]);
-                    PurchaseFactory.removeFromCart(productIndex);
-                    cartInit();
+                var productIndex = $scope.cartProducts.indexOf($scope.cartProducts[index]);
+                PurchaseFactory.removeFromCart(productIndex);
+                cartInit();
             };
 
         }]);
