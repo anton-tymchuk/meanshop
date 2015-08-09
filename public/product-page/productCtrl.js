@@ -5,7 +5,6 @@
             // Get product
             Product.get($routeParams.productId);
             $scope.product = Product;
-
             // Set big image
             $scope.setBigImage = function (image) {
                 $scope.product.item.bigImage = image;

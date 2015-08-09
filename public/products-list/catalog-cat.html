@@ -1,12 +1,12 @@
 <div class="col-md-2 hidden-xs hidden-sm">
     <div class="sidebar">
         <div class="sidebar__header">
-            Каталог
+            Catalog
         </div>
         <cat-list></cat-list>
 
         <div class="sidebar__header">
-            Каталог
+            Brands
         </div>
         <brand-list></brand-list>
 
@@ -33,9 +33,9 @@
 
                     <div class="catalog__price">
                         <span class="catalog__price">
-                            {{product.pricing.price}} грн
+                            {{product.pricing.price | currency}}
                         </span>
-                        <span class="catalog__price--old" ng-show="product.pricing.oldPrice">{{product.pricing.oldPrice}} грн</span>
+                        <span class="catalog__price--old" ng-show="product.pricing.oldPrice">{{product.pricing.oldPrice}}</span>
                     </div>
                 </div>
             </li>

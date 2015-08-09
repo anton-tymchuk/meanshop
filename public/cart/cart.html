@@ -1,14 +1,14 @@
 <div class="col-md-12">
     <div class="cart">
-        <h1>В корзине {{cartLenght}} товара</h1>
+        <h1>Cart {{cartLenght}} items</h1>
         <div class="cart__left">
             <table class="cart__table">
                 <tr>
                     <th>
-                        Описание товара
+                        Product info
                     </th>
                     <th>
-                        Цена
+                        Price
                     </th>
                 </tr>
                 <tr ng-repeat="item in cartProducts">
@@ -22,22 +22,22 @@
                                 {{item.title}} <strong>{{item.brand}}</strong>
                             </div>
                             <ul>
-                                <li><label>Цвет</label> <span>{{item.color}}</span></li>
-                                <li><label>Размер</label> <span>{{item.size}}</span></li>
+                                <li><label>Color:</label> <span>{{item.color}}</span></li>
+                                <li><label>Size:</label> <span>{{item.size}}</span></li>
                             </ul>
                         </div>
                     </td>
                     <td>
                         <div class="cart__table__price">
-                            {{item.price}} <span>грн</span>
+                            {{item.price | currency}}
                             <div class="cart__table__price--old" ng-if="item.oldPrice !== 0" ng-hide="item.oldPrice === item.price">
-                                {{item.oldPrice}} грн
+                                {{item.oldPrice | currency}}
                             </div>
                         </div>
                         <div class="cart__table__remove">
                             <a href="#"ng-click="removeFromCart($index)">
                                 <span class="glyphicon glyphicon-remove"></span>
-                                удалить
+                                remove
                             </a>
                         </div>
                     </td>
@@ -47,27 +47,27 @@
         <div class="cart__right">
             <div class="cart__summary">
                 <div class="cart__summary__title">
-                    Итоговая стоимость
+                    Summary
                 </div>
 
                     <div class="cart__summary__coupon">
-                         <label>Введите купон на скидку:</label>
+                         <label>Discount coupon:</label>
                          <input type="text" name="name" value="">
                          <input type="button" name="name" value="ok" class="btn">
                     </div>
                     <div class="cart__summary__sum_info">
                         <ul>
-                            <li>Подитог: <span> <b>{{oldPriceSum}} грн</b></span></li>
-                            <li>Скидка: <span class="">{{saleSize}} грн ({{salePercent}}%)</span></li>
-                            <li>Доставка: <span> <b>бесплатно</b></span></li>
+                            <li>Summary: <span> <b>{{oldPriceSum | currency}}</b></span></li>
+                            <li>Discount: <span class="">{{saleSize | currency}} ({{salePercent}}%)</span></li>
+                            <li>Shipment: <span> <b>Free shipment</b></span></li>
                         </ul>
                     </div>
                     <div class="cart__summary__sum">
-                        <span class="hidden-sm hidden-xs">Итого:</span>
-                        <strong>{{priceSum}}</strong> <i>грн</i>
+                        <span class="hidden-sm hidden-xs">Summary:</span>
+                        <strong>{{priceSum | currency}}</strong>
                     </div>
                     <div class="cart__summary__confirm">
-                        <a href="/order" class="btn btn__large" ng-click="">далее</a>
+                        <a href="/order" class="btn btn__large" ng-click="">next</a>
                     </div>
 
 

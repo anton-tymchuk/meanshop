@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 var ProductSchema = new Schema({
     sku: String,
     title: String,
-    description: String,
+    description: [String],
 
     brand: String,
     type: String,

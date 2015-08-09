@@ -1,6 +1,6 @@
 <div class="product__size">
     <div class="product__size__grid">
-        <div class="product__size__grid__title">Выберите размер</div>
+        <div class="product__size__grid__title">Select size</div>
         <span class="product__size__select" ng-class="{'product__size__select--selected':selected == $index}" ng-click="selectSize($index)" ng-repeat="size in product.item.details.sizes">  {{size}} </span>
     </div>
 </div>
@@ -8,10 +8,10 @@
 <div class="product__purchase">
     <div class="product__purchase__wishlist">
         <a href="#">
-            <span class="glyphicon glyphicon-plus"></span> добавить в wishlist
+            <span class="glyphicon glyphicon-plus"></span> Add to wishlist
         </a>
     </div>
     <div class="product__purchase__addtocart">
-        <a href="#" class="btn btn__large" ng-click="addToCart()">В корзину</a>
+        <a href="#" class="btn btn__large" ng-click="addToCart()">Add to cart</a>
     </div>
 </div>

@@ -1,10 +1,10 @@
 <div class="order">
     <div class="col-lg-6 col-lg-offset-3">
-        <h1>Оформление заказа</h1>
+        <h1>New order</h1>
         <div class="order__info">
             <form class="" ng-submit="addOrder()" novalidate="">
                 <div class="form-group">
-                    <label for="name">Ваше имя</label>
+                    <label for="name">Name</label>
                     <input type="text" id='name' name="name" value="" class="form-control input-lg" ng-model="orderData.name">
                 </div>
 
@@ -14,36 +14,36 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="phone">Контактный телефон</label>
+                    <label for="phone">Pnone number</label>
                     <input type="text" id="phone" name="phone" value="" class="form-control input-lg" ng-model="orderData.phone">
                 </div>
 
                 <div class="form-group">
-                    <label for="adress">Адрес доставки</label>
+                    <label for="adress">Address</label>
                     <input type="text" id="adress" name="adress" value="" class="form-control input-lg" ng-model="orderData.address">
                 </div>
 
                 <div class="form-group">
-                    <label for="adress">Способ доставки</label>
+                    <label for="adress">Shipment method</label>
                     <select id='delivery'  name="delivery" class="form-control input-lg" ng-model="orderData.deliveryMethod">
                         <option>Новая почта</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="payment">Способ оплаты</label>
+                    <label for="payment">Payment method</label>
                     <select id='payment'  name="payment" class="form-control input-lg" ng-model="orderData.paymentMethod">
                         <option>Наличными при получении</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="annotation">Комментарий к заказу</label>
+                    <label for="annotation">Order note</label>
                     <textarea id="annotation" name="name" class="form-control" rows="3" ng-model="orderData.annotation"></textarea>
                 </div>
 
                 <div class="form-group">
-                    <input type="submit" name="name" value="Оформить заказ" class="btn btn__large">
+                    <input type="submit" name="name" value="Sumbit" class="btn btn__large">
                 </div>
                 </div>
             </form>

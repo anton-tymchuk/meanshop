@@ -1,16 +1,16 @@
 <div class="col-md-12">
     <div class="order">
-        <h1>Спасибо, ваш заказ № {{product.order.orderInfo.id}} принят</h1>
+        <h1>Thank you for your order! Your order № {{product.order.orderInfo.id}} is accepted</h1>
 
         <div class="order__purchased__list">
-            <h3>Вы заказали:</h3>
+            <h3>Your order:</h3>
             <table>
                 <tr>
                     <th>
-                        Описание товара
+                        Product description
                     </th>
                     <th>
-                        Цена
+                        Prict
                     </th>
                 </tr>
                 <tr ng-repeat="product in product.order.products">
@@ -20,11 +20,11 @@
                         </div>
                         <div class="order__purchased__details">
                             {{product.title}} <span>{{product.brand}}</span>
-                            {{product.size}} размер
+                            {{product.size}} size
                         </div>
                     </td>
                     <td>
-                        {{product.price}} грн
+                        {{product.price | currency}}
                     </td>
                 </tr>
             </table>
@@ -34,12 +34,12 @@
             <table>
                 <tr>
                     <th colspan="2">
-                        Информация о заказе
+                        Order info
                     </th>
                 </tr>
                 <tr>
                     <td>
-                        Сумма:
+                        Summary:
                     </td>
                     <td>
                         <b>{{product.order.orderInfo.sum}} грн</b>
@@ -47,7 +47,7 @@
                 </tr>
                 <tr>
                     <td>
-                        Дата
+                        Date
                     </td>
                     <td>
                         {{product.order.orderInfo.date | date:'dd.MM.yyyy HH:mm'}}
@@ -55,7 +55,7 @@
                 </tr>
                 <tr ng-show="product.order.customerInfo.name">
                     <td>
-                        Имя:
+                        Name:
                     </td>
                     <td>
                         {{product.order.customerInfo.name}}
@@ -63,7 +63,7 @@
                 </tr>
                 <tr ng-show="product.order.customerInfo.email">
                     <td>
-                        email:
+                        Email:
                     </td>
                     <td>
                         {{product.order.customerInfo.email}}
@@ -71,7 +71,7 @@
                 </tr>
                 <tr ng-show="product.order.customerInfo.phone">
                     <td>
-                        Телефон:
+                        Phone:
                     </td>
                     <td>
                         {{product.order.customerInfo.phone}}
@@ -79,7 +79,7 @@
                 </tr>
                 <tr>
                     <td>
-                        Адрес доставки:
+                        Shipment address:
                     </td>
                     <td>
                         {{product.order.customerInfo.address}}
@@ -87,7 +87,7 @@
                 </tr>
                 <tr ng-show="product.order.customerInfo.method">
                     <td>
-                        Способ доставки:
+                        Shipment method:
                     </td>
                     <td>
                         {{product.order.orderInfo.delivery.method}}
@@ -95,7 +95,7 @@
                 </tr>
                 <tr ng-show="product.order.customerInfo.method">
                     <td>
-                        Способ оплаты:
+                        Payment method:
                     </td>
                     <td>
                         {{product.order.orderInfo.payment.method}}

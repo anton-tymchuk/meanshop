@@ -6,12 +6,20 @@ var express = require('express'),
     multer  = require('multer'),
     morgan = require('morgan');
 
-var db = mongoose.connect(config.DB, function (err) {
-        if(err) {
-            throw err;
-        }
-        console.log('====== conntected ======');
-});
+ var db = mongoose.connect(config.DB, function (err) {
+         if(err) {
+             throw err;
+         }
+         console.log('====== conntected ======');
+ });
+
+//// local
+//var db = mongoose.connect(config.DB_LOCAL, function (err) {
+//        if(err) {
+//            throw err;
+//        }
+//        console.log('====== conntected to local database ======');
+//});
 
 var Product = require('./app/models/Product'),
     Order = require('./app/models/Orders'),
@@ -31,6 +39,8 @@ app.use(multer({
         return filename.replace(/\W+/g, '-').toLowerCase() + Date.now();
     },
     onFileUploadStart: function (file) {
+
+        // TODO: Check if statement is correct!
         // if (file.extension !== 'jpg') {
         //     console.log('invalid file');
         //     return false;

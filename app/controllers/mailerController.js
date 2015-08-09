@@ -9,10 +9,6 @@ var nodemailer = require('nodemailer'),
             }
         }
     );
-//
-// function emailBody (req){
-//     var
-// }
 
 function sendMail (req){
     transporter.sendMail({

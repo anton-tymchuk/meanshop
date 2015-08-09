@@ -16,13 +16,13 @@
             {{product.item.title}} {{product.item.brand}}
         </div>
         <div class="cart__modal__price">
-            {{product.item.pricing.price}} грн
+            {{product.item.pricing.price | currency}}
         </div>
             <div class="cart__modal__text">
-                Товар добавлен в корзину.
+                Product has been added.
             </div>
         <div class="cart__modal__tocart">
-            <a href="/cart" class="btn">Перейти в корзину</a>
+            <a href="/cart" class="btn">go to cart</a>
         </div>
     </div>
 
