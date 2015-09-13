@@ -60,6 +60,14 @@
                     return $http.get('/api/orders/' + orderHash).success(function (data) {
                         that.order = data;
                     });
+                },
+
+                // Cart length
+                cartLenght: '',
+                getCartLenght: function () {
+                    var arr = [];
+                    arr = JSON.parse(localStorage.getItem('cart'));
+                    this.cartLenght = arr.length;
                 }
             };
         }]);
