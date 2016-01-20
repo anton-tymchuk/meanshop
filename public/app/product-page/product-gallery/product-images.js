@@ -3,7 +3,7 @@
         .directive('productImages', function () {
             return {
                 restrict: 'E',
-                templateUrl: '../product-page/product-gallery/product-images.html',
+                templateUrl: 'app/product-page/product-gallery/product-images.html',
             };
         });
 }());

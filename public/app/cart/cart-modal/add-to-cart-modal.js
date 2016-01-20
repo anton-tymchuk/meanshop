@@ -3,7 +3,7 @@
         .directive('addToCartModal', function ($timeout) {
             return {
                 restrict: 'E',
-                templateUrl: '../cart/cart-modal/add-to-cart-modal.html',
+                templateUrl: 'app/cart/cart-modal/add-to-cart-modal.html',
                 link: function (scope, element, attrs) {
                     scope.closed = true;
                     scope.closeModal = function () {

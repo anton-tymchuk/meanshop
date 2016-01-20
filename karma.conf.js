@@ -15,14 +15,15 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      './public/**/*.js',
-      './public/**/*Spec.js'
+      './public/bower_components/angular/angular.js',
+      './public/bower_components/angular-mocks/angular-mocks.js',
+      './public/bower_components/angular-route/angular-route.js',
+      './public/app/**/*.js',
+      './public/test/**/*Spec.js'
     ],
-
 
     // list of files to exclude
     exclude: [
-      './public/bower_components/**/*.js',
       './public/config/*.js'
     ],
 
@@ -69,4 +70,4 @@ module.exports = function(config) {
     // how many browser should be started simultaneous
     concurrency: Infinity
   })
-}
+};

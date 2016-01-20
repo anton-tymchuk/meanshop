@@ -3,7 +3,7 @@
         .directive('brandList', function () {
             return {
                 restrict: 'E',
-                templateUrl: '../products-list/brands/brand-list.html'
+                templateUrl: 'app/products-list/brands/brand-list.html'
             };
         });
 }());

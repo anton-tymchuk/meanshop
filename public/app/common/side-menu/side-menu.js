@@ -17,7 +17,7 @@ angular.module("pageslide-directive", [])
 .directive('sideMenu', function () {
     return {
         restrict: 'E',
-        templateUrl: '../common/side-menu/side-menu.html'
+        templateUrl: 'app/common/side-menu/side-menu.html'
     };
 })
 

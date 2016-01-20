@@ -3,7 +3,7 @@
         .directive('cartInformer', function () {
             return {
                 restrict: 'E',
-                templateUrl: '../cart/cart-informer/cart-informer.html',
+                templateUrl: 'app/cart/cart-informer/cart-informer.html',
                 controller: 'cartCtrl'
             };
         });

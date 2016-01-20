@@ -2,7 +2,7 @@
     angular.module('shopApp')
         .directive('appHeader', function ($window) {
             return {
-                templateUrl: '../common/header/app-header.html',
+                templateUrl: 'app/common/header/app-header.html',
                 link: function (scope, element, attrs) {
                     scope.bigHeader = true;
 

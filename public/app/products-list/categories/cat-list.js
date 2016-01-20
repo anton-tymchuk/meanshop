@@ -3,7 +3,7 @@
         .directive('catList', function () {
             return {
                 restrict: 'E',
-                templateUrl: '../products-list/categories/cat-list.html',
+                templateUrl: 'app/products-list/categories/cat-list.html',
                 controller: 'categoriesCtrl'
             };
         });
