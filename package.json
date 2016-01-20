@@ -14,7 +14,10 @@
     "gulp-rename": "^1.2.2",
     "gulp-ruby-sass": "^1.0.5",
     "jasmine-node": "^1.14.5",
-    "jshint-stylish": "^0.4.0"
+    "jshint-stylish": "^0.4.0",
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.6"
   },
   "engines": {
     "node": ">=0.10.0"

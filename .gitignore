@@ -3,3 +3,16 @@ dist
 .tmp
 .sass-cache
 bower_components
+.idea/.name
+.idea/deployment.xml
+.idea/encodings.xml
+.idea/jsLibraryMappings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/simpla.iml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/libraries/angular.xml
+.idea/libraries/simpla_node_modules.xml
+design/hipsta-logo-small.psd
+design/hipstalogo.psd
