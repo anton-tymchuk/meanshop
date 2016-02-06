@@ -19,25 +19,33 @@ module.exports = function(config) {
       './public/bower_components/angular-mocks/angular-mocks.js',
       './public/bower_components/angular-route/angular-route.js',
       './public/app/**/*.js',
-      './public/test/**/*Spec.js'
+      './public/app/**/*.html',
+      './test/**/*spec.js'
     ],
 
     // list of files to exclude
     exclude: [
-      './public/config/*.js'
+      './public/config/*.js',
+      './test/api/**/*.js'
     ],
 
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      './public/app/**/*.html': ['ng-html2js']
+    },
+
+    ngHtml2JsPreprocessor: {
+      moduleName: 'shopApp',
+      stripPrefix: 'public/'
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
 
 
     // web server port

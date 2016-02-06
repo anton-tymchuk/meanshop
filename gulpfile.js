@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 
 
 gulp.task('test', function () {
-    gulp.src('test/**/*.spec.js')
+    gulp.src('test/api/**/*.a.js')
         .pipe(jasmine({
             verbose: true
         }));

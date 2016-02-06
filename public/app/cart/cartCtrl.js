@@ -3,19 +3,27 @@
         .controller('cartCtrl', ['$scope', 'PurchaseFactory', function ($scope, PurchaseFactory) {
             $scope.cartLenght = getCartLenght();
 
-            function cartInit() {
+            function countDiscountPercent(price, oldPrice){
+              return 100 - Math.floor((price / oldPrice) * 100);
+            }
+
+            function cartInit(){
                 // Get cart products
                 PurchaseFactory.getCartProducts();
                 $scope.cartProducts = PurchaseFactory.cartProducts;
 
-                // Count sum of products and discount value
+                //Count sum of products and discount value
                 $scope.priceSum = PurchaseFactory.getCartSum('price');
                 $scope.oldPriceSum = PurchaseFactory.getCartSum('oldPrice');
                 $scope.saleSize = $scope.oldPriceSum - $scope.priceSum;
-                $scope.salePercent = 100 - Math.floor(($scope.priceSum / $scope.oldPriceSum) * 100);
+                $scope.salePercent = countDiscountPercent($scope.priceSum, $scope.oldPriceSum);
             }
 
             cartInit();
+
+            $scope.testFunc = function(){
+              return 'test';
+            };
 
             // Remove item from cart
             $scope.removeFromCart = function (index) {
