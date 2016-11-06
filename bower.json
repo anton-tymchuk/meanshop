@@ -2,16 +2,6 @@
   "name": "simpla",
   "private": true,
   "dependencies": {
-    "angular": "~1.4.1",
-    "angular-route": "~1.4.0",
-    "bootstrap": "~3.3.5",
-    "underscore": "~1.8.3",
-    "angular-mocks": "~1.4.8"
-  },
-  "resolutions": {
-    "angular": "~1.4.x"
-  },
-  "devDependencies": {
-    "underscore": "~1.8.3"
+    "bootstrap": "~3.3.5"
   }
 }

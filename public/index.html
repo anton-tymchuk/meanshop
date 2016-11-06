@@ -1,9 +1,8 @@
 <!doctype html>
-<html ng-app="shopApp">
+<html>
   <head>
-    <base href="/" />
     <meta charset="utf-8">
-    <title>{{header}}</title>
+    <title>Hipsta brand</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -18,64 +17,8 @@
     <link rel="stylesheet" href="./styles/css/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-class="{'fixed-header-fix':!bigHeader}">
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <app-header></app-header>
-
-    <div class="container-fluid">
-        <div class="" ng-view autoscroll="true"></div>
-        <div class="footer">
-            © Hipsta Brands - really fashion!
-        </div>
-    </div>
-
-
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js" charset="utf-8"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
-
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="app/app.js"></script>
-
-        <!-- Services -->
-        <script src="app/services/productsService.js" charset="utf-8"></script>
-        <script src="app/services/categoryService.js" charset="utf-8"></script>
-        <script src="app/services/productService.js" charset="utf-8"></script>
-        <script src="app/services/purchaseService.js" charset="utf-8"></script>
-
-        <!--  Product -->
-        <script src="app/product-page/product-gallery/product-images.js" charset="utf-8"></script>
-        <script src="app/product-page/productCtrl.js" charset="utf-8"></script>
-
-        <!-- Cart -->
-        <script src="app/cart/cartCtrl.js" charset="utf-8"></script>
-        <script src="app/cart/add-to-cart/add-to-cart.js" charset="utf-8"></script>
-        <script src="app/cart/cart-informer/cart-informer.js" charset="utf-8"></script>
-        <script src="app/cart/cart-modal/add-to-cart-modal.js" charset="utf-8"></script>
-
-        <!--  Product lists -->
-        <script src="app/products-list/categoriesCtrl.js" charset="utf-8"></script>
-        <script src="app/products-list/productsCtrl.js" charset="utf-8"></script>
-        <script src="app/products-list/categories/cat-list.js" charset="utf-8"></script>
-        <script src="app/products-list/brands/brand-list.js" charset="utf-8"></script>
-
-        <!-- Orders -->
-        <script src="app/order/orderCtrl.js" charset="utf-8"></script>
-        <script src="app/order/singleOrderCtrl.js" charset="utf-8"></script>
-
-        <!-- Shared -->
-        <script src="app/common/header/app-header.js" charset="utf-8"></script>
-        <script src="app/common/side-menu/side-menu.js" charset="utf-8"></script>
-
-        <!-- endbuild -->
-
-
-</body>
+  <body>
+    <div id="app"></div>
+    <script src="dist/bundle.js"></script>
+  </body>
 </html>

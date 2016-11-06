@@ -1,7 +1,7 @@
 {
   "name": "simpla",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "postinstall": "bower cache clean && bower install"
   },
   "devDependencies": {
@@ -19,7 +19,14 @@
     "karma": "^0.13.19",
     "karma-chrome-launcher": "^0.2.2",
     "karma-jasmine": "^0.3.6",
-    "karma-ng-html2js-preprocessor": "^0.2.0"
+    "axios": "^0.15.2",
+    "babel-core": "^6.18.0",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "webpack": "^1.13.3"
   },
   "engines": {
     "node": ">=0.10.0"

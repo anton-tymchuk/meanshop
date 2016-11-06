@@ -4,7 +4,13 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     config = require('./app/config/config'),
     multer  = require('multer'),
-    morgan = require('morgan');
+    morgan = require('morgan'),
+    webpack = require('webpack'),
+    webpackDevMiddleware = require('webpack-dev-middleware'),
+    webpackConfig = require('./webpack.config');
+
+
+const compiler = webpack(webpackConfig);
 
  var db = mongoose.connect(config.DB, function (err) {
          if(err) {
@@ -24,6 +30,12 @@ var express = require('express'),
 var Product = require('./app/models/Product'),
     Order = require('./app/models/Orders'),
     User = require('./app/models/User');
+
+
+app.use(webpackDevMiddleware(compiler, {
+  noInfo: true,
+  publicPath: webpackConfig.output.publicPath,
+}));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
