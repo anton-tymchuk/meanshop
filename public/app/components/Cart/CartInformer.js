@@ -1,5 +1,3 @@
-import React from 'react';
-
 import React, { PropTypes } from 'react'
 
 const CartInformer = (props) => (
